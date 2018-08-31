@@ -1,0 +1,10 @@
+{
+  "pack": "en",
+  "pack_icon": "uk.svg",
+  "pack_label": "English",
+  "pack_active": true,
+
+  "home": {
+    "slogan": "Public Chain Ecology Oriented To Energy Economy"
+  }
+}

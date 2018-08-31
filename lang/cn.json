@@ -1,0 +1,10 @@
+{
+  "pack": "cn",
+  "pack_icon": "cn.svg",
+  "pack_label": "中文",
+  "pack_active": true,
+
+  "home": {
+    "slogan": "面向能源经济的公链生态"
+  }
+}

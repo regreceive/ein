@@ -1,0 +1,17 @@
+.container {
+  display: table;
+  width: 100%;
+  max-width: 1920px;
+  height: 100vh;
+  padding: 70px 0 0 0;
+  margin: 0;
+  background-color: antiquewhite;
+}
+
+.slogan {
+  display: table-cell;
+  color: #1f2943;
+  vertical-align: middle;
+  font-size: 40px;
+  text-align: center;
+}
