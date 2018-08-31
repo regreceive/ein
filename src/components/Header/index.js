@@ -7,6 +7,7 @@ import {
 } from 'react-localize-redux';
 import { Menu, Dropdown, Button, Icon } from 'antd';
 
+import { setLanguage } from '../../services/language';
 import './Header.css';
 import logo from './assets/logo.png';
 
@@ -24,7 +25,9 @@ const lang = {
 })
 export default class extends React.Component {
   handleMenuClick = e => {
-    this.props.dispatch(this.props.setActiveLanguage(e.key));
+    const { dispatch } = this.props;
+    setLanguage(e.key, dispatch);
+    dispatch(this.props.setActiveLanguage(e.key));
   };
 
   menu = (
