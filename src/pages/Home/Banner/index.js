@@ -4,6 +4,7 @@ import './Banner.css';
 import { Icon } from 'antd';
 const Banner = props => {
   const { translate } = props;
+
   return (
     <div styleName="container">
       <div styleName="Coming-Soon">{translate('home.soon')}</div>
