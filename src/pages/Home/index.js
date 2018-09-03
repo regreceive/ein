@@ -5,7 +5,6 @@ import { getTranslate } from 'react-localize-redux/lib/index';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Banner from './Banner';
-
 @connect(store => {
   return {
     translate: getTranslate(store.locale),
