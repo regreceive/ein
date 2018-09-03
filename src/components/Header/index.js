@@ -25,7 +25,7 @@ const lang = {
 })
 export default class extends React.Component {
   handleMenuClick = e => {
-    const { dispatch } = this.props;
+    const { dispatch, translate } = this.props;
     setLanguage(e.key, dispatch);
     dispatch(this.props.setActiveLanguage(e.key));
   };
@@ -44,6 +44,7 @@ export default class extends React.Component {
   );
 
   render() {
+    const { translate } = this.props;
     return (
       <div styleName="root">
         <div styleName="container">
@@ -52,7 +53,11 @@ export default class extends React.Component {
               <img src={logo} alt="" />
             </a>
           </h1>
-          <ul styleName="head-nav">
+          <h3 styleName="head-Public-Chain-Ecology">
+            {translate('home.slogan')}
+          </h3>
+
+          {/* <ul styleName="head-nav">
             <li>
               <a href="#">菜单1</a>
             </li>
@@ -70,7 +75,7 @@ export default class extends React.Component {
                 </Button>
               </Dropdown>
             </li>
-          </ul>
+          </ul> */}
         </div>
       </div>
     );

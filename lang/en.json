@@ -3,8 +3,19 @@
   "pack_icon": "uk.svg",
   "pack_label": "English",
   "pack_active": true,
-
+  "header": {
+    "slogan": "Public Chain Ecology "
+  },
   "home": {
-    "slogan": "Public Chain Ecology Oriented To Energy Economy"
+    "slogan": "Public Chain Ecology Oriented To Energy Economy ",
+    "text-1": "Latest Testnet Trial Run",
+    "text-2": "3000+ tx/s ",
+    "span":  "5000+ tx/s",
+    "li-1": "No. of Shards: 256   ",
+    "li-2": "No. of Clusters: 50    ",
+    "li-3": "Peak TPS: 10,000+",
+    "natework": "Total nodes in the network: 6450 = 129 x 50 (distributed amongst East/West America, Asia, Europe, etc.) ",
+    "button": "SUBSCRIBE",
+    "soon": "COMING SOON"
   }
 }

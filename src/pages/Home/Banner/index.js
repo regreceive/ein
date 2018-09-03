@@ -1,13 +1,33 @@
 import React from 'react';
 
 import './Banner.css';
-
+import { Icon } from 'antd';
 const Banner = props => {
   const { translate } = props;
 
   return (
     <div styleName="container">
-      <p styleName="slogan">{translate('home.slogan')}</p>
+      <div styleName="Coming-Soon">{translate('home.soon')}</div>
+      <div styleName="Latest-Testnet-Trial">
+        <p styleName="text-style-1">{translate('home.text-1')}</p>
+        <h4 styleName="text-style-2">
+          {translate('home.text-2')}
+          <span styleName="s"> {translate('home.span')}</span>
+        </h4>
+      </div>
+      <div styleName="No-of-Shards-256-N">
+        <ul>
+          <li>{translate('home.li-1')}</li>
+          <li>{translate('home.li-2')}</li>
+          <li>{translate('home.li-3')}</li>
+        </ul>
+        <p>{translate('home.natework')}</p>
+      </div>
+      <div styleName="Rectangle">
+        <input placeholder="&nbsp;&nbsp;&nbsp;&nbsp;Email" type="text" />
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <button styleName="Rectangle-3">{translate('home.button')}</button>
+      </div>
     </div>
   );
 };
