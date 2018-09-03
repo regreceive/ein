@@ -17,5 +17,10 @@
     "natework": "Total nodes in the network: 6450 = 129 x 50 (distributed amongst East/West America, Asia, Europe, etc.) ",
     "button": "SUBSCRIBE",
     "soon": "COMING SOON"
+  },
+  "footer":{
+    "li-1": "Private Policy",
+    "li-2": "Terms of Use",
+    "li-3": "contact@echoin.io"
   }
 }
