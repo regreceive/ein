@@ -2,8 +2,8 @@ $w:19px;
 $h:19px;
 $cw:10px;
 $ch:10px;
-$l:2px;
-$bot:-7px;
+$l:1px;
+$bot:-8px;
 
 @mixin circle-common {
   width: $w;
@@ -91,11 +91,11 @@ $bot:-7px;
     @include circle-common;
     left: 22.5%;
     box-shadow: 0 0 5px 0 #a5fecb;
-    animation: showStepOne 1s linear 2s;
-    -webkit-animation: showStepOne 1s linear 2s;
-    -moz-animation: showStepOne 1s linear 2s;
-    -o-animation: showStepOne 1s linear 2s;
-    animation-fill-mode: forwards;
+    animation: showStepOne 1s infinite 2s;
+    -webkit-animation: showStepOne 1s infinite 2s;
+    -moz-animation: showStepOne 1s infinite 2s;
+    -o-animation: showStepOne 1s infinite 2s;
+    // animation-fill-mode: forwards;
 
     .circle {
       @include circle-inside;
@@ -152,13 +152,14 @@ $bot:-7px;
     color: #fff;
     left: 21%;
     bottom: 25px;
-    animation: flash 1s infinite 2s;
-    -webkit-animation: flash 1s infinite 2s;
-    -o-animation: flash 1s infinite 2s;
-    -moz-animation: flash 1s infinite 2s;
+    animation: twink 1s 2s;
+    -webkit-animation: twink 1s 2s;
+    -o-animation: twink 1s 2s;
+    -moz-animation: twink 1s 2s;
     animation-fill-mode: forwards;
     opacity: 0;
-    font-weight: bold;
+    text-shadow:1px 0 1px #fff, 0 1px 1px #fff, 
+    0 -1px 1px #fff, -1px 0 1px #fff;
   }
 
   .s1TxtBot {
@@ -213,13 +214,21 @@ $bot:-7px;
   }
 
   50% {
+    background: -webkit-linear-gradient(to right, #1a29ff, #20bdff);
+    background: -moz-linear-gradient(to right, #1a29ff, #20bdff);
+    background: -o-linear-gradient(to right, #1a29ff, #20bdff);
+    background: -ms-linear-gradient(to right, #1a29ff, #20bdff);
     background: linear-gradient(to right, #1a29ff, #20bdff);
+    // filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#1a29ff',endColorStr='#20bdff',gradientType='1');
     left: 0px;
     width: 15%;
     bottom: 0px;
   }
 
   100% {
+    background: -webkit-linear-gradient(to right, #1a29ff, #20bdff, #a5fecb);
+    background: -o-linear-gradient(to right, #1a29ff, #20bdff, #a5fecb);
+    background: -moz-linear-gradient(to right, #1a29ff, #20bdff, #a5fecb);
     background: linear-gradient(to right, #1a29ff, #20bdff, #a5fecb);
     left: 0px;
     width: 23%;
@@ -236,6 +245,10 @@ $bot:-7px;
   }
 
   50% {
+    filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#1a29ff',endColorStr='#20bdff',gradientType='1');
+    background: -webkit-linear-gradient(to right, #1a29ff, #20bdff);
+    background: -o-linear-gradient(to right, #1a29ff, #20bdff);
+    background: -moz-linear-gradient(to right, #1a29ff, #20bdff);
     background: linear-gradient(to right, #1a29ff, #20bdff);
     left: 0px;
     width: 15%;
@@ -243,6 +256,9 @@ $bot:-7px;
   }
 
   100% {
+    background: -webkit-linear-gradient(to right, #1a29ff, #20bdff, #a5fecb);
+    background: -o-linear-gradient(to right, #1a29ff, #20bdff, #a5fecb);
+    background: -moz-linear-gradient(to right, #1a29ff, #20bdff, #a5fecb);
     background: linear-gradient(to right, #1a29ff, #20bdff, #a5fecb);
     left: 0px;
     width: 23%;
@@ -259,6 +275,10 @@ $bot:-7px;
   }
 
   50% {
+    filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#1a29ff',endColorStr='#20bdff',gradientType='1');
+    background: -webkit-linear-gradient(to right, #1a29ff, #20bdff);
+    background: -o-linear-gradient(to right, #1a29ff, #20bdff);
+    background: -moz-linear-gradient(to right, #1a29ff, #20bdff);
     background: linear-gradient(to right, #1a29ff, #20bdff);
     left: 0px;
     width: 15%;
@@ -266,6 +286,9 @@ $bot:-7px;
   }
 
   100% {
+    background: -webkit-linear-gradient(to right, #1a29ff, #20bdff, #a5fecb);
+    background: -o-linear-gradient(to right, #1a29ff, #20bdff, #a5fecb);
+    background: -moz-linear-gradient(to right, #1a29ff, #20bdff, #a5fecb);
     background: linear-gradient(to right, #1a29ff, #20bdff, #a5fecb);
     left: 0px;
     width: 23%;
@@ -282,6 +305,11 @@ $bot:-7px;
   }
 
   50% {
+    filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#1a29ff',endColorStr='#20bdff',gradientType='1');
+    background: -webkit-linear-gradient(to right, #1a29ff, #20bdff);
+    background: -o-linear-gradient(to right, #1a29ff, #20bdff);
+    background: -moz-linear-gradient(to right, #1a29ff, #20bdff);
+    background: -ms-linear-gradient(to right, #1a29ff, #20bdff);
     background: linear-gradient(to right, #1a29ff, #20bdff);
     left: 0px;
     width: 15%;
@@ -289,6 +317,10 @@ $bot:-7px;
   }
 
   100% {
+    background: -webkit-linear-gradient(to right, #1a29ff, #20bdff, #a5fecb);
+    background: -o-linear-gradient(to right, #1a29ff, #20bdff, #a5fecb);
+    background: -moz-linear-gradient(to right, #1a29ff, #20bdff, #a5fecb);
+    background: -ms-linear-gradient(to right, #1a29ff, #20bdff, #a5fecb);
     background: linear-gradient(to right, #1a29ff, #20bdff, #a5fecb);
     left: 0px;
     width: 23%;
@@ -300,14 +332,14 @@ $bot:-7px;
 @-webkit-keyframes stepTwo {
   0% {
     background: #fff;
-    left: 23.2%;
+    left: 23%;
     width: 0px;
     bottom: 0px;
   }
 
   100% {
     background: #fff;
-    left: 23.2%;
+    left: 23%;
     width: 18%;
     bottom: 0px;
   }
@@ -316,14 +348,14 @@ $bot:-7px;
 @-o-keyframes stepTwo {
   0% {
     background: #fff;
-    left: 23.2%;
+    left: 23%;
     width: 0px;
     bottom: 0px;
   }
 
   100% {
     background: #fff;
-    left: 23.2%;
+    left: 23%;
     width: 18%;
     bottom: 0px;
   }
@@ -332,14 +364,14 @@ $bot:-7px;
 @-moz-keyframes stepTwo {
   0% {
     background: #fff;
-    left: 23.2%;
+    left: 23%;
     width: 0px;
     bottom: 0px;
   }
 
   100% {
     background: #fff;
-    left: 23.2%;
+    left: 23%;
     width: 18%;
     bottom: 0px;
   }
@@ -348,14 +380,14 @@ $bot:-7px;
 @keyframes stepTwo {
   0% {
     background: #fff;
-    left: 23.2%;
+    left: 23%;
     width: 0px;
     bottom: 0px;
   }
 
   100% {
     background: #fff;
-    left: 23.2%;
+    left: 23%;
     width: 18%;
     bottom: 0px;
   }
@@ -364,14 +396,14 @@ $bot:-7px;
 @keyframes stepTwo {
   0% {
     background: #fff;
-    left: 23.2%;
+    left: 23%;
     width: 0px;
     bottom: 0px;
   }
 
   100% {
     background: #fff;
-    left: 23.2%;
+    left: 23%;
     width: 18%;
     bottom: 0px;
   }
@@ -638,66 +670,66 @@ $bot:-7px;
 }
 
 /*-----文字闪烁效果---*/
-@-webkit-keyframes flash {
-  0% {
-    opacity: 0;
-  }
+// @-webkit-keyframes flash {
+//   0% {
+//     opacity: 0;
+//   }
 
-  50% {
-    opacity: 1;
-    color: #ff0000;
-    font-size: 24px;
-  }
+//   50% {
+//     opacity: 1;
+//     color: #ff0000;
+//     font-size: 24px;
+//   }
 
-  100% {
-    opacity: 0;
-  }
-}
+//   100% {
+//     opacity: 0;
+//   }
+// }
 
-@-o-keyframes flash {
-  0% {
-    opacity: 0;
-  }
+// @-o-keyframes flash {
+//   0% {
+//     opacity: 0;
+//   }
 
-  50% {
-    opacity: 1;
-    color: #ff0000;
-    font-size: 24px;
-  }
+//   50% {
+//     opacity: 1;
+//     color: #ff0000;
+//     font-size: 24px;
+//   }
 
-  100% {
-    opacity: 0;
-  }
-}
+//   100% {
+//     opacity: 0;
+//   }
+// }
 
-@-moz-keyframes flash {
-  0% {
-    opacity: 0;
-  }
+// @-moz-keyframes flash {
+//   0% {
+//     opacity: 0;
+//   }
 
-  50% {
-    opacity: 1;
-    color: #ff0000;
-    font-size: 24px;
-  }
+//   50% {
+//     opacity: 1;
+//     color: #ff0000;
+//     font-size: 24px;
+//   }
 
-  100% {
-    opacity: 0;
-  }
-}
+//   100% {
+//     opacity: 0;
+//   }
+// }
 
-@keyframes flash {
-  0% {
-    opacity: 0;
-  }
+// @keyframes flash {
+//   0% {
+//     opacity: 0;
+//   }
 
-  50% {
-    opacity: 1;
-    color: #ff0000;
-    font-size: 24px;
-  }
+//   50% {
+//     opacity: 1;
+//     color: #ff0000;
+//     font-size: 24px;
+//   }
 
-  100% {
-    opacity: 0;
-  }
-}
+//   100% {
+//     opacity: 0;
+//   }
+// }

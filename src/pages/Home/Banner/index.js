@@ -15,11 +15,11 @@ const Banner = props => {
           <h4 styleName="text-style-2" />
         </div>
         <div styleName="No-of-Shards-256-N">
-          {/* <ul>
-          <li>{translate('home.li-1')}</li>
-          <li>{translate('home.li-2')}</li>
-          <li>{translate('home.li-3')}</li>
-        </ul> */}
+          <ul>
+            <li>{translate('home.li-1')}</li>
+            <li>{translate('home.li-2')}</li>
+            <li>{translate('home.li-3')}</li>
+          </ul>
           <p>{translate('home.natework')}</p>
         </div>
         <div styleName="Rectangle">
