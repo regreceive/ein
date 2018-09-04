@@ -7,7 +7,6 @@ export default class Progress extends React.Component {
   render() {
     return (
       <div styleName="Progress-box">
-        <div styleName="bg" />
         <div styleName="line1" />
         <div styleName="step1">
           <div styleName="circle" />

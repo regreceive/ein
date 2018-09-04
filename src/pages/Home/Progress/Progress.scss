@@ -36,19 +36,21 @@ $bot:-7px;
 }
 
 .Progress-box {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  background: #001c31;
+  // padding-top: 50px;
+  // padding-bottom: 50px;
+  // background: #001c31;
 
-  .bg {
-    background: #001c31;
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    width: 100%;
-    height: 50px;
-  }
-
+  // .bg {
+  //   background: #001c31;
+  //   position: absolute;
+  //   bottom: 0px;
+  //   left: 0px;
+  //   width: 100%;
+  //   height: 50px;
+  // }
+  position: relative;
+  top:25px;
+  left:0px;
   .line1 {
     @include line;
     animation: stepOne 2s linear;

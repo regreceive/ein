@@ -2,6 +2,7 @@ import React from 'react';
 
 import './Banner.css';
 import { Icon } from 'antd';
+import Progress from '../Progress';
 const Banner = props => {
   const { translate } = props;
 
@@ -12,6 +13,7 @@ const Banner = props => {
         <p styleName="text-style-1">{translate('home.text-1')}</p>
         <h4 styleName="text-style-2" />
       </div>
+      <Progress />
       <div styleName="No-of-Shards-256-N">
         {/* <ul>
           <li>{translate('home.li-1')}</li>
