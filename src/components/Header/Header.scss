@@ -11,6 +11,10 @@
   height: 100%;
   margin: auto;
   overflow: hidden;
+  @media (max-width :768px){
+    width: 718px;
+    max-width: 768px;
+  }
 }
 
 .head-logo {

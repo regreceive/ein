@@ -47,6 +47,9 @@ const Footer = () => {
               <a href="" />2
             </li>
           </ul>
+          <p styleName="Copyright-Echoin-T">
+            Copyright © Echoin Team 2014-2018 Echoin Contributors www.echoin.io
+          </p>
         </div>
       </div>
     </div>
