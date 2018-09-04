@@ -54,36 +54,24 @@ $bot:-8px;
   .line1 {
     @include line;
     animation: stepOne 2s linear;
-    -webkit-animation: stepOne 2s linear;
-    -moz-animation: stepOne 2s linear;
-    -o-animation: stepOne 2s linear;
     animation-fill-mode: forwards;
   }
 
   .line2 {
     @include line;
     animation: stepTwo 2s linear 3s;
-    -webkit-animation: stepTwo 2s linear 3s;
-    -moz-animation: stepTwo 2s linear 3s;
-    -o-animation: stepTwo 2s linear 3s;
     animation-fill-mode: forwards;
   }
 
   .line3 {
     @include line;
     animation: stepThree 2s linear 6s;
-    -webkit-animation: stepThree 2s linear 6s;
-    -moz-animation: stepThree 2s linear 6s;
-    -o-animation: stepThree 2s linear 6s;
     animation-fill-mode: forwards;
   }
 
   .line4 {
     @include line;
     animation: stepFour 2s linear 9s;
-    -webkit-animation: stepFour 2s linear 9s;
-    -moz-animation: stepFour 2s linear 9s;
-    -o-animation: stepFour 2s linear 9s;
     animation-fill-mode: forwards;
   }
 
@@ -92,17 +80,11 @@ $bot:-8px;
     left: 22.5%;
     box-shadow: 0 0 5px 0 #a5fecb;
     animation: showStepOne 1s infinite 2s;
-    -webkit-animation: showStepOne 1s infinite 2s;
-    -moz-animation: showStepOne 1s infinite 2s;
-    -o-animation: showStepOne 1s infinite 2s;
     // animation-fill-mode: forwards;
 
     .circle {
       @include circle-inside;
       animation: showStepOne 1s linear 2s;
-      -webkit-animation: showStepOne 1s linear 2s;
-      -o-animation: showStepOne 1s linear 2s;
-      -moz-animation: showStepOne 1s linear 2s;
       animation-fill-mode: forwards;
     }
   }
@@ -111,17 +93,11 @@ $bot:-8px;
     @include circle-common;
     left: 40.8%;
     animation: showStepOne 1s linear 5s;
-    -webkit-animation: showStepOne 1s linear 5s;
-    -moz-animation: showStepOne 1s linear 5s;
-    -o-animation: showStepOne 1s linear 5s;
     animation-fill-mode: forwards;
 
     .circle {
       @include circle-inside;
       animation: showStepOne 1s linear 5s;
-      -webkit-animation: showStepOne 1s linear 5s;
-      -o-animation: showStepOne 1s linear 5s;
-      -moz-animation: showStepOne 1s linear 5s;
       animation-fill-mode: forwards;
     }
   }
@@ -131,17 +107,11 @@ $bot:-8px;
     left: 67.2%;
     bottom: $bot;
     animation: showStepOne 1s linear 8s;
-    -webkit-animation: showStepOne 1s linear 8s;
-    -o-animation: showStepOne 1s linear 8s;
-    -moz-animation: showStepOne 1s linear 8s;
     animation-fill-mode: forwards;
 
     .circle {
       @include circle-inside;
       animation: showStepOne 1s linear 8s;
-      -webkit-animation: showStepOne 1s linear 8s;
-      -moz-animation: showStepOne 1s linear 8s;
-      -o-animation: showStepOne 1s linear 8s;
       animation-fill-mode: forwards;
     }
   }
@@ -153,9 +123,6 @@ $bot:-8px;
     left: 21%;
     bottom: 25px;
     animation: twink 1s 2s;
-    -webkit-animation: twink 1s 2s;
-    -o-animation: twink 1s 2s;
-    -moz-animation: twink 1s 2s;
     animation-fill-mode: forwards;
     opacity: 0;
     text-shadow:1px 0 1px #fff, 0 1px 1px #fff, 
@@ -166,9 +133,6 @@ $bot:-8px;
     position: absolute;
     color: #fff;
     animation: twink 1s linear 2s;
-    -webkit-animation: twink 1s linear 2s;
-    -o-animation: twink 1s linear 2s;
-    -moz-animation: twink 1s linear 2s;
     animation-fill-mode: forwards;
     opacity: 0;
     left: 21%;
@@ -181,9 +145,6 @@ $bot:-8px;
     left: 40%;
     bottom: 25px;
     animation: twink 1s linear 5s;
-    -webkit-animation: twink 1s linear 5s;
-    -o-animation: twink 1s linear 5s;
-    -moz-animation: twink 1s linear 5s;
     animation-fill-mode: forwards;
     opacity: 0;
     font-family: Montserrat;
@@ -195,9 +156,6 @@ $bot:-8px;
     left: 66%;
     bottom: 25px;
     animation: twink 1s linear 8s;
-    -webkit-animation: twink 1s linear 8s;
-    -moz-animation: twink 1s linear 8s;
-    -o-animation: twink 1s linear 8s;
     animation-fill-mode: forwards;
     opacity: 0;
     font-family: Montserrat;
@@ -205,97 +163,6 @@ $bot:-8px;
 }
 
 /*------第一条线动画效果-----*/
-@-webkit-keyframes stepOne {
-  0% {
-    background: #1a29ff;
-    left: 0px;
-    width: 0px;
-    bottom: 0px;
-  }
-
-  50% {
-    background: -webkit-linear-gradient(to right, #1a29ff, #20bdff);
-    background: -moz-linear-gradient(to right, #1a29ff, #20bdff);
-    background: -o-linear-gradient(to right, #1a29ff, #20bdff);
-    background: -ms-linear-gradient(to right, #1a29ff, #20bdff);
-    background: linear-gradient(to right, #1a29ff, #20bdff);
-    // filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#1a29ff',endColorStr='#20bdff',gradientType='1');
-    left: 0px;
-    width: 15%;
-    bottom: 0px;
-  }
-
-  100% {
-    background: -webkit-linear-gradient(to right, #1a29ff, #20bdff, #a5fecb);
-    background: -o-linear-gradient(to right, #1a29ff, #20bdff, #a5fecb);
-    background: -moz-linear-gradient(to right, #1a29ff, #20bdff, #a5fecb);
-    background: linear-gradient(to right, #1a29ff, #20bdff, #a5fecb);
-    left: 0px;
-    width: 23%;
-    bottom: 0px;
-  }
-}
-
-@-o-keyframes stepOne {
-  0% {
-    background: #1a29ff;
-    left: 0px;
-    width: 0px;
-    bottom: 0px;
-  }
-
-  50% {
-    filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#1a29ff',endColorStr='#20bdff',gradientType='1');
-    background: -webkit-linear-gradient(to right, #1a29ff, #20bdff);
-    background: -o-linear-gradient(to right, #1a29ff, #20bdff);
-    background: -moz-linear-gradient(to right, #1a29ff, #20bdff);
-    background: linear-gradient(to right, #1a29ff, #20bdff);
-    left: 0px;
-    width: 15%;
-    bottom: 0px;
-  }
-
-  100% {
-    background: -webkit-linear-gradient(to right, #1a29ff, #20bdff, #a5fecb);
-    background: -o-linear-gradient(to right, #1a29ff, #20bdff, #a5fecb);
-    background: -moz-linear-gradient(to right, #1a29ff, #20bdff, #a5fecb);
-    background: linear-gradient(to right, #1a29ff, #20bdff, #a5fecb);
-    left: 0px;
-    width: 23%;
-    bottom: 0px;
-  }
-}
-
-@-moz-keyframes stepOne {
-  0% {
-    background: #1a29ff;
-    left: 0px;
-    width: 0px;
-    bottom: 0px;
-  }
-
-  50% {
-    filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#1a29ff',endColorStr='#20bdff',gradientType='1');
-    background: -webkit-linear-gradient(to right, #1a29ff, #20bdff);
-    background: -o-linear-gradient(to right, #1a29ff, #20bdff);
-    background: -moz-linear-gradient(to right, #1a29ff, #20bdff);
-    background: linear-gradient(to right, #1a29ff, #20bdff);
-    left: 0px;
-    width: 15%;
-    bottom: 0px;
-  }
-
-  100% {
-    background: -webkit-linear-gradient(to right, #1a29ff, #20bdff, #a5fecb);
-    background: -o-linear-gradient(to right, #1a29ff, #20bdff, #a5fecb);
-    background: -moz-linear-gradient(to right, #1a29ff, #20bdff, #a5fecb);
-    background: linear-gradient(to right, #1a29ff, #20bdff, #a5fecb);
-    left: 0px;
-    width: 23%;
-    bottom: 0px;
-  }
-}
-
 @keyframes stepOne {
   0% {
     background: #1a29ff;
@@ -305,11 +172,6 @@ $bot:-8px;
   }
 
   50% {
-    filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#1a29ff',endColorStr='#20bdff',gradientType='1');
-    background: -webkit-linear-gradient(to right, #1a29ff, #20bdff);
-    background: -o-linear-gradient(to right, #1a29ff, #20bdff);
-    background: -moz-linear-gradient(to right, #1a29ff, #20bdff);
-    background: -ms-linear-gradient(to right, #1a29ff, #20bdff);
     background: linear-gradient(to right, #1a29ff, #20bdff);
     left: 0px;
     width: 15%;
@@ -317,10 +179,6 @@ $bot:-8px;
   }
 
   100% {
-    background: -webkit-linear-gradient(to right, #1a29ff, #20bdff, #a5fecb);
-    background: -o-linear-gradient(to right, #1a29ff, #20bdff, #a5fecb);
-    background: -moz-linear-gradient(to right, #1a29ff, #20bdff, #a5fecb);
-    background: -ms-linear-gradient(to right, #1a29ff, #20bdff, #a5fecb);
     background: linear-gradient(to right, #1a29ff, #20bdff, #a5fecb);
     left: 0px;
     width: 23%;
@@ -329,70 +187,6 @@ $bot:-8px;
 }
 
 /*------第二条线动画效果-----*/
-@-webkit-keyframes stepTwo {
-  0% {
-    background: #fff;
-    left: 23%;
-    width: 0px;
-    bottom: 0px;
-  }
-
-  100% {
-    background: #fff;
-    left: 23%;
-    width: 18%;
-    bottom: 0px;
-  }
-}
-
-@-o-keyframes stepTwo {
-  0% {
-    background: #fff;
-    left: 23%;
-    width: 0px;
-    bottom: 0px;
-  }
-
-  100% {
-    background: #fff;
-    left: 23%;
-    width: 18%;
-    bottom: 0px;
-  }
-}
-
-@-moz-keyframes stepTwo {
-  0% {
-    background: #fff;
-    left: 23%;
-    width: 0px;
-    bottom: 0px;
-  }
-
-  100% {
-    background: #fff;
-    left: 23%;
-    width: 18%;
-    bottom: 0px;
-  }
-}
-
-@keyframes stepTwo {
-  0% {
-    background: #fff;
-    left: 23%;
-    width: 0px;
-    bottom: 0px;
-  }
-
-  100% {
-    background: #fff;
-    left: 23%;
-    width: 18%;
-    bottom: 0px;
-  }
-}
-
 @keyframes stepTwo {
   0% {
     background: #fff;
@@ -410,54 +204,6 @@ $bot:-8px;
 }
 
 /*-----第三条线动画效果---*/
-@-webkit-keyframes stepThree {
-  0% {
-    background: #fff;
-    left: 41.5%;
-    width: 0px;
-    bottom: 0px;
-  }
-
-  100% {
-    background: #fff;
-    left: 41.5%;
-    width: 26%;
-    bottom: 0px;
-  }
-}
-
-@-o-keyframes stepThree {
-  0% {
-    background: #fff;
-    left: 41.5%;
-    width: 0px;
-    bottom: 0px;
-  }
-
-  100% {
-    background: #fff;
-    left: 41.5%;
-    width: 26%;
-    bottom: 0px;
-  }
-}
-
-@-moz-keyframes stepThree {
-  0% {
-    background: #fff;
-    left: 41.5%;
-    width: 0px;
-    bottom: 0px;
-  }
-
-  100% {
-    background: #fff;
-    left: 41.5%;
-    width: 26%;
-    bottom: 0px;
-  }
-}
-
 @keyframes stepThree {
   0% {
     background: #fff;
@@ -475,54 +221,6 @@ $bot:-8px;
 }
 
 /*----第四条线的动画效果---*/
-@-webkit-keyframes stepFour {
-  0% {
-    background: #fff;
-    left: 68%;
-    width: 0px;
-    bottom: 0px;
-  }
-
-  100% {
-    background: #fff;
-    left: 68%;
-    width: 32%;
-    bottom: 0px;
-  }
-}
-
-@-o-keyframes stepFour {
-  0% {
-    background: #fff;
-    left: 68%;
-    width: 0px;
-    bottom: 0px;
-  }
-
-  100% {
-    background: #fff;
-    left: 68%;
-    width: 32%;
-    bottom: 0px;
-  }
-}
-
-@-moz-keyframes stepFour {
-  0% {
-    background: #fff;
-    left: 68%;
-    width: 0px;
-    bottom: 0px;
-  }
-
-  100% {
-    background: #fff;
-    left: 68%;
-    width: 32%;
-    bottom: 0px;
-  }
-}
-
 @keyframes stepFour {
   0% {
     background: #fff;
@@ -540,60 +238,6 @@ $bot:-8px;
 }
 
 /*----节点出现效果----*/
-@-webkit-keyframes showStepOne {
-  0% {
-    transform: scale(0, 0);
-  }
-
-  40% {
-    transform: scale(0.4, 0.4);
-  }
-
-  80% {
-    transform: scale(0.8, 0.8);
-  }
-
-  100% {
-    transform: scale(1, 1);
-  }
-}
-
-@-o-keyframes showStepOne {
-  0% {
-    transform: scale(0, 0);
-  }
-
-  40% {
-    transform: scale(0.4, 0.4);
-  }
-
-  80% {
-    transform: scale(0.8, 0.8);
-  }
-
-  100% {
-    transform: scale(1, 1);
-  }
-}
-
-@-moz-keyframes showStepOne {
-  0% {
-    transform: scale(0, 0);
-  }
-
-  40% {
-    transform: scale(0.4, 0.4);
-  }
-
-  80% {
-    transform: scale(0.8, 0.8);
-  }
-
-  100% {
-    transform: scale(1, 1);
-  }
-}
-
 @keyframes showStepOne {
   0% {
     transform: scale(0, 0);
@@ -613,48 +257,6 @@ $bot:-8px;
 }
 
 /*----文字渐显效果---*/
-@-webkit-keyframes twink {
-  0% {
-    opacity: 0.2;
-  }
-
-  50% {
-    opacity: 0.5;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@-o-keyframes twink {
-  0% {
-    opacity: 0.2;
-  }
-
-  50% {
-    opacity: 0.5;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@-moz-keyframes twink {
-  0% {
-    opacity: 0.2;
-  }
-
-  50% {
-    opacity: 0.5;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
 @keyframes twink {
   0% {
     opacity: 0.2;
@@ -670,53 +272,6 @@ $bot:-8px;
 }
 
 /*-----文字闪烁效果---*/
-// @-webkit-keyframes flash {
-//   0% {
-//     opacity: 0;
-//   }
-
-//   50% {
-//     opacity: 1;
-//     color: #ff0000;
-//     font-size: 24px;
-//   }
-
-//   100% {
-//     opacity: 0;
-//   }
-// }
-
-// @-o-keyframes flash {
-//   0% {
-//     opacity: 0;
-//   }
-
-//   50% {
-//     opacity: 1;
-//     color: #ff0000;
-//     font-size: 24px;
-//   }
-
-//   100% {
-//     opacity: 0;
-//   }
-// }
-
-// @-moz-keyframes flash {
-//   0% {
-//     opacity: 0;
-//   }
-
-//   50% {
-//     opacity: 1;
-//     color: #ff0000;
-//     font-size: 24px;
-//   }
-
-//   100% {
-//     opacity: 0;
-//   }
-// }
 
 // @keyframes flash {
 //   0% {
