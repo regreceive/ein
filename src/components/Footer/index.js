@@ -1,8 +1,11 @@
 import React from 'react';
 
 import './Footer.css';
-import { Icon } from 'antd';
-
+const imgs = [
+  require('./img/Email.png'),
+  require('./img/Bitmap.png'),
+  require('./img/zsxq.png'),
+];
 const Footer = () => {
   return (
     <div styleName="root">
@@ -17,34 +20,54 @@ const Footer = () => {
         <div styleName="bottom-right">
           <ul>
             <li>
-              <a href="" />
+              <a href="">
+                <img alt="" src={imgs[1]} />
+              </a>
             </li>
             <li>
-              <a href="" />2
+              <a href="">
+                <img alt="" src={imgs[1]} />
+              </a>
             </li>
             <li>
-              <a href="" />1
+              <a href="">
+                <img alt="" src={imgs[1]} />
+              </a>
             </li>
             <li>
-              <a href="" />2
+              <a href="">
+                <img alt="" src={imgs[1]} />
+              </a>
             </li>
             <li>
-              <a href="" />4
+              <a href="">
+                <img alt="" src={imgs[1]} />
+              </a>
             </li>
             <li>
-              <a href="" />3
+              <a href="">
+                <img alt="" src={imgs[1]} />
+              </a>
             </li>
             <li>
-              <a href="" />6
+              <a href="">
+                <img alt="" src={imgs[1]} />
+              </a>
             </li>
             <li>
-              <a href="" />5
+              <a href="">
+                <img alt="" src={imgs[2]} />
+              </a>
             </li>
             <li>
-              <a href="" />3
+              <a href="">
+                <img alt="" src={imgs[0]} />
+              </a>
             </li>
             <li>
-              <a href="" />2
+              <a href="">
+                <img alt="" src={imgs[1]} />
+              </a>
             </li>
           </ul>
           <p styleName="Copyright-Echoin-T">
