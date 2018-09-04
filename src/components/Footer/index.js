@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Footer.css';
 import { Icon } from 'antd';
-import MessageSvg from './Icon/weibo.svg';
+
 const Footer = () => {
   return (
     <div styleName="root">
@@ -36,9 +36,6 @@ const Footer = () => {
             </li>
             <li>
               <a href="" />6
-              <svg className="icon">
-                <use xlinkHref="http://www.w3.org/1999/xlink" />
-              </svg>
             </li>
             <li>
               <a href="" />5
