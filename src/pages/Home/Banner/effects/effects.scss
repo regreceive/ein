@@ -6,4 +6,9 @@
   mask-image: url(../assets/mask.png);
   mask-repeat: no-repeat;
   transition: mask-position .1s;
+
+  @media screen and (max-width: 750px) {
+    background-size: 200%;
+    mask-image: none;
+  }
 }
