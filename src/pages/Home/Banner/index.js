@@ -3,16 +3,17 @@ import React from 'react';
 import './Banner.css';
 import { Icon } from 'antd';
 import Progress from '../Progress';
+import Spot from './effects/Spot';
 const Banner = props => {
   const { translate } = props;
 
   return (
-    <div>
+    <div styleName="root">
+      <Spot />
       <div styleName="container">
-        <div styleName="Coming-Soon">{translate('home.soon')}</div>
+        <div styleName="bg-font">{translate('home.soon')}</div>
         <div styleName="Latest-Testnet-Trial">
-          <p styleName="text-style-1">{translate('home.text-1')}</p>
-          <h4 styleName="text-style-2" />
+          <h4 styleName="text-style-1">{translate('home.text-1')}</h4>
         </div>
         <div styleName="No-of-Shards-256-N">
           <ul>

@@ -48,14 +48,12 @@ export default class extends React.Component {
     return (
       <div styleName="root">
         <div styleName="container">
-          <h1 styleName="head-logo">
-            <a href="/">
-              <img src={logo} alt="" />
-            </a>
-          </h1>
-          <h3 styleName="head-Public-Chain-Ecology">
+          <a href="/" styleName="head-logo">
+            <img src={logo} alt="" />
+          </a>
+          <div styleName="head-Public-Chain-Ecology">
             {translate('home.slogan')}
-          </h3>
+          </div>
 
           {/* <ul styleName="head-nav">
             <li>
