@@ -1,238 +1,212 @@
-$w:19px;
-$h:19px;
+$w:20px;
+$h:20px;
 $cw:10px;
 $ch:10px;
 $l:1px;
-$bot:-8px;
+$bot:-9px;
 
 @mixin circle-common {
-  position: absolute;
-  bottom: $bot;
   width: $w;
   height: $h;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #20bdff #a5fecb #20bdff #1a29ff;
-  border-radius: 50%;
-  background: transparent;
-  transform: scale(0, 0);
+  background:url('./assets/circle.png') no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  bottom: $bot;
   z-index: 1;
 }
 
 @mixin circle-inside {
-  position: relative;
-  top: 4px;
-  left: 4px;
   width: $cw;
   height: $ch;
   border-radius: 50%;
   background: linear-gradient(to right, #1a29ff, #20bdff, #a5fecb);
+  position: relative;
+  top: 4px;
+  left: 4px;
   transform: scale(0, 0);
 }
 
 @mixin line {
-  position: absolute;
   height: $l;
+  position: absolute;
 }
 
 .Progress-box {
   position: relative;
   top:-460px;
-  left:0;
-
+  left:0px;
+  @media (max-width:750px) {
+    top:-150px;
+  }
   .line1 {
-    animation: stepOne 2s linear;
-    animation-fill-mode: forwards;
-
     @include line;
+    animation: stepOne 1s linear;
+    animation-fill-mode: forwards;
   }
 
   .line2 {
-    animation: stepTwo 2s linear 3s;
-    animation-fill-mode: forwards;
-
     @include line;
+    animation: stepTwo 1s linear 1.5s;
+    animation-fill-mode: forwards;
   }
 
   .line3 {
-    animation: stepThree 2s linear 6s;
-    animation-fill-mode: forwards;
-
     @include line;
+    animation: stepThree 1s linear 3s;
+    animation-fill-mode: forwards;
   }
 
   .line4 {
-    animation: stepFour 2s linear 9s;
-    animation-fill-mode: forwards;
-
     @include line;
+    animation: stepFour 1s linear 4.5s;
+    animation-fill-mode: forwards;
   }
 
   .step1 {
+    @include circle-common;
     left: 22.5%;
     box-shadow: 0 0 5px 0 #a5fecb;
-    animation: showStepOne 1s infinite 2s;
-    // animation-fill-mode: forwards;
-
-    .circle {
-      animation: showStepOne 1s linear 2s;
-      animation-fill-mode: forwards;
-
-      @include circle-inside;
-    }
-
-    @include circle-common;
+    border-radius: 50%;
+    animation: flash 1s infinite 1s;
+    transform: scale(0, 0);
   }
 
   .step2 {
-    left: 40.8%;
-    animation: showStepOne 1s linear 5s;
-    animation-fill-mode: forwards;
-
-    .circle {
-      animation: showStepOne 1s linear 5s;
-      animation-fill-mode: forwards;
-
-      @include circle-inside;
-    }
-
     @include circle-common;
+    left: 40.8%;
+    transform: scale(0, 0);
+    animation: showStepOne 0.5s linear 2.5s;
+    animation-fill-mode: forwards;
   }
 
   .step3 {
-    bottom: $bot;
-    left: 67.2%;
-    animation: showStepOne 1s linear 8s;
-    animation-fill-mode: forwards;
-
-    .circle {
-      animation: showStepOne 1s linear 8s;
-      animation-fill-mode: forwards;
-
-      @include circle-inside;
-    }
-
     @include circle-common;
+    left: 67.2%;
+    bottom: $bot;
+    transform: scale(0, 0);
+    animation: showStepOne 0.5s linear 4s;
+    animation-fill-mode: forwards;
   }
 
   .s1TxtTop {
     position: absolute;
-    bottom: 25px;
-    left: 21%;
+    font-size: 24px;
+    font-family:PingFangSC-Medium;
     color: #fff;
-    opacity: 0;
-    font-size: 20px;
-    text-shadow:1px 0 1px #fff, 0 1px 1px #fff, 
-      0 -1px 1px #fff, -1px 0 1px #fff;
-    animation: twink 1s 2s;
+    left: 21%;
+    bottom: 25px;
+    animation: twink 1s 1s;
     animation-fill-mode: forwards;
+    opacity: 0;
+    text-shadow:1px 0 1px #fff, 0 1px 1px #fff, 
+    0 -1px 1px #fff, -1px 0 1px #fff;
   }
 
   .s1TxtBot {
     position: absolute;
-    bottom: -40px;
-    left: 21%;
     color: #fff;
-    opacity: 0;
     animation: twink 1s linear 2s;
     animation-fill-mode: forwards;
+    opacity: 0;
+    left: 21%;
+    bottom: -40px;
   }
 
   .s2TxtTop {
     position: absolute;
-    bottom: 25px;
-    left: 40%;
     color: #fff;
+    left: 40%;
+    bottom: 25px;
+    animation: twink 1s linear 2.5s;
+    animation-fill-mode: forwards;
     opacity: 0;
     font-family: Montserrat;
-    animation: twink 1s linear 5s;
-    animation-fill-mode: forwards;
   }
 
   .s3TxtTop {
     position: absolute;
-    bottom: 25px;
-    left: 66%;
     color: #fff;
+    left: 66%;
+    bottom: 25px;
+    animation: twink 1s linear 4s;
+    animation-fill-mode: forwards;
     opacity: 0;
     font-family: Montserrat;
-    animation: twink 1s linear 8s;
-    animation-fill-mode: forwards;
   }
 }
 
 /*------第一条线动画效果-----*/
 @keyframes stepOne {
   0% {
-    bottom: 0;
-    left: 0;
-    width: 0;
     background: #1a29ff;
+    left: 0px;
+    width: 0px;
+    bottom: 0px;
   }
 
   50% {
-    bottom: 0;
-    left: 0;
-    width: 15%;
     background: linear-gradient(to right, #1a29ff, #20bdff);
+    left: 0px;
+    width: 15%;
+    bottom: 0px;
   }
 
   100% {
-    bottom: 0;
-    left: 0;
-    width: 23%;
     background: linear-gradient(to right, #1a29ff, #20bdff, #a5fecb);
+    left: 0px;
+    width: 23%;
+    bottom: 0px;
   }
 }
 
 /*------第二条线动画效果-----*/
 @keyframes stepTwo {
   0% {
-    bottom: 0;
-    left: 23%;
-    width: 0;
     background: #fff;
+    left: 23%;
+    width: 0px;
+    bottom: 0px;
   }
 
   100% {
-    bottom: 0;
+    background: #fff;
     left: 23%;
     width: 18%;
-    background: #fff;
+    bottom: 0px;
   }
 }
 
 /*-----第三条线动画效果---*/
 @keyframes stepThree {
   0% {
-    bottom: 0;
-    left: 41.5%;
-    width: 0;
     background: #fff;
+    left: 41.5%;
+    width: 0px;
+    bottom: 0px;
   }
 
   100% {
-    bottom: 0;
+    background: #fff;
     left: 41.5%;
     width: 26%;
-    background: #fff;
+    bottom: 0px;
   }
 }
 
 /*----第四条线的动画效果---*/
 @keyframes stepFour {
   0% {
-    bottom: 0;
-    left: 68%;
-    width: 0;
     background: #fff;
+    left: 68%;
+    width: 0px;
+    bottom: 0px;
   }
 
   100% {
-    bottom: 0;
+    background: #fff;
     left: 68%;
     width: 32%;
-    background: #fff;
+    bottom: 0px;
   }
 }
 
@@ -243,11 +217,11 @@ $bot:-8px;
   }
 
   40% {
-    transform: scale(.4, .4);
+    transform: scale(0.4, 0.4);
   }
 
   80% {
-    transform: scale(.8, .8);
+    transform: scale(0.8, 0.8);
   }
 
   100% {
@@ -258,11 +232,11 @@ $bot:-8px;
 /*----文字渐显效果---*/
 @keyframes twink {
   0% {
-    opacity: .2;
+    opacity: 0.2;
   }
 
   50% {
-    opacity: .5;
+    opacity: 0.5;
   }
 
   100% {
@@ -287,3 +261,26 @@ $bot:-8px;
 //     opacity: 0;
 //   }
 // }
+
+@keyframes flash {
+  0% {
+    transform: scale(1, 1);
+    box-shadow: 0 0 5px 0 #a5fecb;
+  }
+  25%{
+    transform: scale(1, 1);
+    box-shadow: 0 0 10px 0 #a5fecb;
+  }
+  50% {
+    transform: scale(1, 1);
+    box-shadow: 0 0 15px 0 #a5fecb;
+  }
+  75% {
+    transform: scale(1, 1);
+    box-shadow: 0 0 10px 0 #a5fecb;
+  }
+  100% {
+    transform: scale(1, 1);
+    box-shadow: 0 0 5px 0 #a5fecb;
+  }
+}

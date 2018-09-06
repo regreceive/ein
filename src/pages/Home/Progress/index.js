@@ -8,17 +8,11 @@ export default class Progress extends React.Component {
     return (
       <div styleName="Progress-box">
         <div styleName="line1" />
-        <div styleName="step1">
-          <div styleName="circle" />
-        </div>
+        <div styleName="step1" />
         <div styleName="line2" />
-        <div styleName="step2">
-          <div styleName="circle" />
-        </div>
+        <div styleName="step2" />
         <div styleName="line3" />
-        <div styleName="step3">
-          <div styleName="circle" />
-        </div>
+        <div styleName="step3" />
         <div styleName="line4" />
         <div styleName="s1TxtTop">3,000+ tx/s</div>
         {/* <div styleName="s1TxtBot">I love web</div> */}

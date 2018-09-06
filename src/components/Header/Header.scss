@@ -1,37 +1,46 @@
 .root {
   position: absolute;
   width: 100%;
-  z-index: 10;
+  background-color: #001c31;
 
   .container {
     max-width: 1170px;
+    padding:0 10px;
     height: 100%;
     margin: 0 auto;
     overflow: hidden;
 
+    @media (max-width: 750px) {
+      width: 100%;
+      padding:0 25px;
+    }
+
     .head-logo {
-      display: block;
+      margin: 59px 0px 2px 0px;
       width: 235px;
       height: 66px;
-      margin: 59px 0 2px 0;
       object-fit: contain;
-
+      display: block;
+      @media (max-width:750px) {
+        width:120px;
+        height:34px;
+        margin:25px 0px 2px 0px;
+      }
       img {
+        width:100%;
         height: auto;
       }
     }
 
     .head-Public-Chain-Ecology {
-      max-width: 670px;
       height: 44px;
-      color: #fff;
       font-family: LibreBaskerville;
       line-height: 44px;
-      letter-spacing: .8px;
-    }
-
-    @media (max-width: 768px) {
-      width: 100%;
+      letter-spacing: 0.8px;
+      color: #ffffff;
+      @media (max-width:750px) {
+        font-size:11px;
+      }
     }
   }
 }
@@ -42,7 +51,7 @@
   margin: 20px 30px 0 0;
   font-size: 14px;
 
-  > li {
+  >li {
     display: inline-block;
     list-style-type: none;
     margin-left: 30px;

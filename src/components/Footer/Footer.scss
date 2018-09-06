@@ -9,33 +9,33 @@
     overflow: hidden;
 
     .bottom-left {
-      float: left;
       margin-top: 70px;
+      float: left;
 
       li {
         height: 20px;
-        color: #fff;
-        font-style: normal;
-        font-weight: normal;
-        font-stretch: normal;
-        font-size: 12px;
         font-family: Montserrat;
+        font-size: 12px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
         line-height: 2;
         letter-spacing: normal;
+        color: #ffffff;
       }
     }
 
     .bottom-right {
-      float: right;
       height: 30px;
+      float: right;
       margin-top: 70px;
 
       li {
         float: left;
         width: 30px;
         height: 30px;
-        border-radius: 16px;
         margin-right: 17px;
+        border-radius: 16px;
         background-color: white;
 
         &:hover {
@@ -46,8 +46,8 @@
         img {
           width: 18px;
           height: 16px;
-          margin-top: 6px;
           margin-left: 6px;
+          margin-top: 6px;
         }
       }
     }
@@ -55,15 +55,15 @@
     .Copyright-Echoin-T {
       width: 473px;
       height: 20px;
-      margin-top: 40px;
-      color: #fff;
-      font-style: normal;
-      font-weight: normal;
-      font-stretch: normal;
-      font-size: 12px;
       font-family: Montserrat;
+      font-size: 12px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
       line-height: 2;
-      letter-spacing: .6px;
+      letter-spacing: 0.6px;
+      color: #ffffff;
+      margin-top: 40px;
     }
   }
 }

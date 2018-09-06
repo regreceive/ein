@@ -28,6 +28,10 @@ const Banner = props => {
           &nbsp;&nbsp;&nbsp;&nbsp;
           <button styleName="Rectangle-3">{translate('home.button')}</button>
         </div>
+        <div styleName="mobile-Rectangle">
+          <input />
+          <div styleName="btn" />
+        </div>
       </div>
       <Progress />
     </div>
