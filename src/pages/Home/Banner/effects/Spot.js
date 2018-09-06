@@ -18,7 +18,7 @@ export default class extends React.Component {
   offsetY = 0;
   viewWidth = 0;
   viewHeight = 0;
-  maskSize = 690;
+  maskSize = 1289;
 
   resizeThrottled = throttle(() => {
     this.viewWidth = this.ref.current.offsetWidth;
