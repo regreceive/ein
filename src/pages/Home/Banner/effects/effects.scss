@@ -8,6 +8,7 @@
   transition: mask-position .1s;
 
   @media screen and (max-width: 750px) {
+    background-position: 39%;
     background-size: 200%;
     mask-image: none;
     opacity: .5;
