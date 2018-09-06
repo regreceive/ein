@@ -1,8 +1,9 @@
 
-@font-face{
+@font-face {
   font-family: LibreBaskerville;
-    src: url('../../../font/librebaskerville/LibreBaskerville-Regular.ttf');
+  src: url('../../../font/librebaskerville/LibreBaskerville-Regular.ttf');
 }
+
 body,
 ul,
 li {
@@ -13,10 +14,12 @@ li {
 li {
   list-style: none;
 }
-section{
+
+section {
   background-color: #001c31;
 }
-@font-face{
+
+@font-face {
   font-family: Montserrat;
   src: url('../../../font/Montserrat/Montserrat-Regular.ttf');
 }
