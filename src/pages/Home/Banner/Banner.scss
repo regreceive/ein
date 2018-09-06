@@ -2,172 +2,177 @@
   position: relative;
   background: url(./assets/city_dark.png) no-repeat center center;
 
-  .container {
-    max-width: 1170px;
-    height: 100%;
-    padding:171px 10px 0 10px;
-    margin: 0 auto;
+  @media screen and (max-width: 750px) {
+    background-image: none;
+  }
+}
 
-    .bg-font {
-      width: 714px;
-      height: 280px;
-      margin: 113px 0 0 0;
+.container {
+  max-width: 1170px;
+  height: 100%;
+  padding:171px 10px 0 10px;
+  margin: 0 auto;
+
+  .bg-font {
+    width: 714px;
+    height: 280px;
+    margin: 113px 0 0 0;
+    color: #fff;
+    opacity: .08;
+    font-weight:bold;
+    font-size: 150px;
+    font-family: Montserrat;
+    line-height: .93;
+    letter-spacing: 8.3px;
+    pointer-events: none;
+
+    @media (max-width:750px) {
+      width:100%;
+      height: 128px;
+      margin:87px 0 0 0;
+      font-size:64px;
+    }
+  }
+
+  .Latest-Testnet-Trial {
+    width: 670px;
+    height: 104px;
+    margin-top: -68px;
+    color: #fff;
+    font-size: 48px;
+    font-family: LibreBaskerville;
+    line-height: 1;
+    letter-spacing: 1.3px;
+
+    .text-style-1 {
       color: #fff;
-      opacity: .08;
-      font-weight:bold;
-      font-size: 150px;
-      font-family: Montserrat;
-      line-height: .93;
-      letter-spacing: 8.3px;
+      font-weight: 500;
+      font-size: 48px;
+      font-family: LibreBaskerville;
+      line-height: 2;
+      letter-spacing: 1.3px;
       pointer-events: none;
 
       @media (max-width:750px) {
-        width:100%;
-        height: 128px;
-        margin:87px 0 0 0;
-        font-size:64px;
-      }
-    }
-
-    .Latest-Testnet-Trial {
-      width: 670px;
-      height: 104px;
-      margin-top: -68px;
-      color: #fff;
-      font-size: 48px;
-      font-family: LibreBaskerville;
-      line-height: 1;
-      letter-spacing: 1.3px;
-
-      .text-style-1 {
-        color: #fff;
-        font-weight: 500;
-        font-size: 48px;
-        font-family: LibreBaskerville;
-        line-height: 2;
-        letter-spacing: 1.3px;
-        pointer-events: none;
-
-        @media (max-width:750px) {
-          font-size:36px;
-          line-height:1.3;
-        }
-      }
-
-      @media (max-width:750px) {
-        width:100%;
-        margin-top:-40px;
-      }
-    }
-
-    .No-of-Shards-256-N {
-      max-width: 500px;
-      height: 168px;
-      margin: 70px 0 0 0;
-      color: #fff;
-      overflow: hidden;
-      font-family: Montserrat;
-      line-height: 2;
-      letter-spacing: normal;
-
-      p {
-        margin-top: 32px;
-      }
-
-      @media (max-width:750px) {
-        display:none;
-      }
-    }
-
-    .Rectangle {
-      position: relative;
-      max-width: 490px;
-      height: 60px;
-      border: solid 2px transparent;
-      border-radius: 30px;
-      margin: 52px 0 150px 0;
-      color: #fff;
-      background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #a5fecb, #20bdff 42%, #1a29ff);
-      background-origin: border-box;
-      background-clip: content-box, border-box;
-
-      .Rectangle-3 {
-        width: 178px;
-        height: 48px;
-        border: none;
-        border-radius: 24px;
-        outline: none;
-        background-image: linear-gradient(to bottom, #3853ff, #1a29ff);
-      }
-
-      input {
-        width: 100%;
-        height: 100%;
-        padding-right: 186px;
-        padding-left: 20px;
-        border-width: 0;
-        border-radius: 30px;
-        outline: none;
-        background: #001c31;
-        // border: solid 3px transparent;
-        // background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(to right, #a5fecb, #20bdff 42%, #1a29ff);
-        // background-origin: border-box;
-        // background-clip: content-box, border-box;
-      }
-
-      button {
-        position: absolute;
-        top: 3.5px;
-        right: 6px;
-      }
-
-      @media (max-width:750px) {
-        display:none;
-      }
-    }
-
-    .mobile-Rectangle {
-      position: relative;
-      display: none;
-      width:100%;
-      height:55px;
-      border: solid 2px transparent;
-      border-radius: 30px;
-      margin:80px 0 58px 0;
-      background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #a5fecb, #20bdff 42%, #1a29ff);
-      background-origin: border-box;
-      background-clip: content-box, border-box;
-
-      input {
-        width:100%;
-        height:100%;
-        border-width:0;
-        border-radius: 30px;
-        outline: none;
-        background: #001c31;
-      }
-
-      .btn {
-        position: absolute;
-        right:3px;
-        bottom:3px;
-        width:45px;
-        height:45px;
-        border-radius: 50%;
-        background:#1a29ff;
-      }
-
-      @media (max-width:750px) {
-        display:block;
+        font-size:36px;
+        line-height:1.3;
       }
     }
 
     @media (max-width:750px) {
       width:100%;
-      padding:105px 25px 0 25px;
+      margin-top:-40px;
     }
   }
+
+  .No-of-Shards-256-N {
+    max-width: 500px;
+    height: 168px;
+    margin: 70px 0 0 0;
+    color: #fff;
+    overflow: hidden;
+    font-family: Montserrat;
+    line-height: 2;
+    letter-spacing: normal;
+
+    p {
+      margin-top: 32px;
+    }
+
+    @media (max-width:750px) {
+      display:none;
+    }
+  }
+
+  .Rectangle {
+    position: relative;
+    max-width: 490px;
+    height: 60px;
+    border: solid 2px transparent;
+    border-radius: 30px;
+    margin: 52px 0 150px 0;
+    color: #fff;
+    background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #a5fecb, #20bdff 42%, #1a29ff);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+
+    .Rectangle-3 {
+      width: 178px;
+      height: 48px;
+      border: none;
+      border-radius: 24px;
+      outline: none;
+      background-image: linear-gradient(to bottom, #3853ff, #1a29ff);
+    }
+
+    input {
+      width: 100%;
+      height: 100%;
+      padding-right: 186px;
+      padding-left: 20px;
+      border-width: 0;
+      border-radius: 30px;
+      outline: none;
+      background: #001c31;
+      // border: solid 3px transparent;
+      // background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(to right, #a5fecb, #20bdff 42%, #1a29ff);
+      // background-origin: border-box;
+      // background-clip: content-box, border-box;
+    }
+
+    button {
+      position: absolute;
+      top: 3.5px;
+      right: 6px;
+    }
+
+    @media (max-width:750px) {
+      display:none;
+    }
+  }
+
+  .mobile-Rectangle {
+    position: relative;
+    display: none;
+    width:100%;
+    height:55px;
+    border: solid 2px transparent;
+    border-radius: 30px;
+    margin:80px 0 58px 0;
+    background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #a5fecb, #20bdff 42%, #1a29ff);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+
+    input {
+      width:100%;
+      height:100%;
+      border-width:0;
+      border-radius: 30px;
+      outline: none;
+      background: #001c31;
+    }
+
+    .btn {
+      position: absolute;
+      right:3px;
+      bottom:3px;
+      width:45px;
+      height:45px;
+      border-radius: 50%;
+      background:#1a29ff;
+    }
+
+    @media (max-width:750px) {
+      display:block;
+    }
+  }
+
+  @media (max-width:750px) {
+    width:100%;
+    padding:105px 25px 0 25px;
+  }
 }
+
 
 //文字特效
 
@@ -237,13 +242,13 @@
 
 .company_name {
   opacity: 0;
-  animation: lefteaseinAnimate 1s ease 2.5s 1;
 
   /*调用已定义好的动画lefteaseinAnimate，全程运行时间1S，进入的速度曲线为ease，只播放一次*/
   -webkit-animation: lefteaseinAnimate 1s ease 2.5s 1;
   -ms-animation: lefteaseinAnimate 1s ease 2.5s 1;
   -o-animation: lefteaseinAnimate 1s ease 2.5s 1;
   -moz-animation: lefteaseinAnimate 1s ease 2.5s 1;
+  animation: lefteaseinAnimate 1s ease 2.5s 1;
 
   /*规定动画的最后状态为结束状态*/
   -webkit-animation-fill-mode: forwards;
