@@ -16,6 +16,9 @@
       left:10px;
       margin:auto;
       height:70px;
+      @media (max-width :768px){
+        display: none;
+      }
       li {
         height: 20px;
         font-family: Montserrat;
@@ -34,6 +37,17 @@
       bottom:0;
       margin:auto;
       height:70px;
+      @media (max-width :768px){
+        margin-top: 30px;
+      }
+     
+      ul{
+        @media (max-width :768px){
+          display: flex;
+          justify-content:  space-around;
+          flex-wrap: nowrap;
+        }
+      }
       li {
         float: left;
         width: 30px;
@@ -43,8 +57,20 @@
         margin-right: 17px;
         background-color: white;
         font-family: Montserrat;
+        @media (max-width :768px){
+          width: 0.22rem;
+          height: 0.22rem;
+          float: float;
+          margin-right: 0;
+          border-radius: 0.16rem;
+          background-color: white;
+         
+        }
         &:not(:last-child){
           margin-right: 19px;
+          @media (max-width :768px){
+            margin-right: 0px;
+          }
         }
         &:hover {
           background-color: blue;
@@ -56,6 +82,12 @@
           height: 16px;
           margin-top: 6px;
           margin-left: 6px;
+          @media (max-width :768px){
+            width: 0.13rem;
+            height: 0.14rem;
+            margin-left: 0.04rem;
+            margin-top:0.01rem;
+          }
         }
       }
       .Copyright-Echoin-T {
