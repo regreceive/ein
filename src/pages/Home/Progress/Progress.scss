@@ -10,7 +10,7 @@ $bot:-9px;
   bottom: $bot;
   width: $w;
   height: $h;
-  background:url('./assets/circle.png') no-repeat;
+  background: url('./assets/circle.png') no-repeat;
   background-size: 100% 100%;
   z-index: 1;
 }
@@ -33,34 +33,30 @@ $bot:-9px;
 
 .Progress-box {
   position: relative;
-  top:-460px;
-  left:0;
+  top: -460px;
+  left: 0;
 
   .line1 {
     animation: stepOne 1s linear;
     animation-fill-mode: forwards;
-
     @include line;
   }
 
   .line2 {
     animation: stepTwo 1s linear 1.5s;
     animation-fill-mode: forwards;
-
     @include line;
   }
 
   .line3 {
     animation: stepThree 1s linear 3s;
     animation-fill-mode: forwards;
-
     @include line;
   }
 
   .line4 {
     animation: stepFour 1s linear 4.5s;
     animation-fill-mode: forwards;
-
     @include line;
   }
 
@@ -70,7 +66,6 @@ $bot:-9px;
     box-shadow: 0 0 5px 0 #a5fecb;
     transform: scale(0, 0);
     animation: flash 1s infinite 1s;
-
     @include circle-common;
   }
 
@@ -79,7 +74,6 @@ $bot:-9px;
     transform: scale(0, 0);
     animation: showStepOne .5s linear 2.5s;
     animation-fill-mode: forwards;
-
     @include circle-common;
   }
 
@@ -89,7 +83,6 @@ $bot:-9px;
     transform: scale(0, 0);
     animation: showStepOne .5s linear 4s;
     animation-fill-mode: forwards;
-
     @include circle-common;
   }
 
@@ -100,11 +93,19 @@ $bot:-9px;
     color: #fff;
     opacity: 0;
     font-size: 24px;
-    font-family:PingFangSC-Medium;
-    text-shadow:1px 0 1px #fff, 0 1px 1px #fff, 
-      0 -1px 1px #fff, -1px 0 1px #fff;
     animation: twink 1s 1s;
     animation-fill-mode: forwards;
+    text-shadow: 0px 0px 4px #fff;
+
+    span {
+      &:first-child {
+        font-family: Montserrat;
+      }
+
+      &:last-child {
+        font-family: PingFangSC Medium;
+      }
+    }
   }
 
   .s1TxtBot {
@@ -140,7 +141,7 @@ $bot:-9px;
   }
 
   @media (max-width:750px) {
-    top:-150px;
+    top: -150px;
   }
 }
 
@@ -254,23 +255,19 @@ $bot:-9px;
 }
 
 /*-----文字闪烁效果---*/
-
 // @keyframes flash {
 //   0% {
 //     opacity: 0;
 //   }
-
 //   50% {
 //     opacity: 1;
 //     color: #ff0000;
 //     font-size: 24px;
 //   }
-
 //   100% {
 //     opacity: 0;
 //   }
 // }
-
 @keyframes flash {
   0% {
     box-shadow: 0 0 5px 0 #a5fecb;
