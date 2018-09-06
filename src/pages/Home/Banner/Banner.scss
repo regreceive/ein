@@ -46,6 +46,7 @@
         font-family: LibreBaskerville;
         line-height: 2;
         letter-spacing: 1.3px;
+        pointer-events: none;
 
         @media (max-width:750px) {
           font-size:36px;
