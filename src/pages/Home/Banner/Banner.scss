@@ -96,7 +96,9 @@
     background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #a5fecb, #20bdff 42%, #1a29ff);
     background-origin: border-box;
     background-clip: content-box, border-box;
-
+    animation: floatUp .5s linear 2.7s;
+    animation-fill-mode: forwards;
+    opacity: 0;
     .Rectangle-3 {
       width: 178px;
       height: 48px;
@@ -179,6 +181,25 @@
     padding:105px 25px 0 25px;
   }
 }
+
+@keyframes floatUp {
+  0%{
+    opacity: 0;
+    bottom: -15px;
+  }
+  25%{
+    opacity: 0.2;
+    bottom: -10px;
+  }
+  50%{
+    opacity: 0.5;
+    bottom:-5px;
+  }
+  100%{
+    opacity: 1;
+    bottom:0px;
+  }
+}
 .aniSpan {
   // animation: spanAnimate 0.2s ease 2.5s 1;
   // /*调用已定义好的动画lefteaseinAnimate，全程运行时间1S，进入的速度曲线为ease，只播放一次*/
@@ -187,7 +208,7 @@
   // /*规定动画的最后状态为结束状态*/
   // animation-fill-mode: forwards;
   transform: translateY(120%);
-  animation: spanAnimate 0.4s ease-out;
+  animation: spanAnimate 0.4s ease-out 0.25s;
   animation-fill-mode: forwards;
  
 }
@@ -223,70 +244,11 @@
 
   /*在100%时设置文字在想X轴0px位移处，也就是原始布局的位置，透明度为1，也就是文字可以看见了*/
 }
-
-@-webkit-keyframes lefteaseinAnimate {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-2000px);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-  }
-}
-
-@-o-keyframes lefteaseinAnimate {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-2000px);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-  }
-}
-
-@-ms-keyframes lefteaseinAnimate {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-2000px);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-  }
-}
-
-@-moz-keyframes lefteaseinAnimate {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-2000px);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-  }
-}
-
 .company_name {
   opacity: 0;
-
   /*调用已定义好的动画lefteaseinAnimate，全程运行时间1S，进入的速度曲线为ease，只播放一次*/
-  -webkit-animation: lefteaseinAnimate 1s ease 2.5s 1;
-  -ms-animation: lefteaseinAnimate 1s ease 2.5s 1;
-  -o-animation: lefteaseinAnimate 1s ease 2.5s 1;
-  -moz-animation: lefteaseinAnimate 1s ease 2.5s 1;
-  animation: lefteaseinAnimate 1s ease 2.5s 1;
-
+  animation: lefteaseinAnimate 1s ease 2.7s 1;
   /*规定动画的最后状态为结束状态*/
-  -webkit-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
-  -ms-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 
