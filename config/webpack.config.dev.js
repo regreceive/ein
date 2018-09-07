@@ -41,7 +41,6 @@ module.exports = {
   entry: [
     // We ship a few polyfills by default:
     require.resolve('./polyfills'),
-    require.resolve('whatwg-fetch'),
     require.resolve('react-dev-utils/webpackHotDevClient'),
     // Include an alternative client for WebpackDevServer. A client's job is to
     // connect to WebpackDevServer by a socket and get notified about changes.
@@ -71,7 +70,8 @@ module.exports = {
     // This is the URL that app is served from. We use "/" in development.
     publicPath: publicPath,
     // Point sourcemap entries to original disk location (format as URL on Windows)
-    devtoolModuleFilenameTemplate: info => path.resolve(info.absoluteResourcePath).replace(/\\/g, '/'),
+    devtoolModuleFilenameTemplate: info =>
+      path.resolve(info.absoluteResourcePath).replace(/\\/g, '/'),
   },
   resolve: {
     // 如果src下的组件被导入，不希望以'./component'的形式，而是'component'
@@ -141,6 +141,21 @@ module.exports = {
               name: 'static/media/[name].[hash:8].[ext]',
             },
           },
+          {
+            test: /\.svg$/,
+            use: [
+              'babel-loader',
+              {
+                loader: 'react-svg-loader',
+                options: {
+                  svgo: {
+                    plugins: [{ removeTitle: false }],
+                    floatPrecision: 2,
+                  },
+                },
+              },
+            ],
+          },
           // Process JS with Babel.
           {
             test: /\.(js|jsx|mjs)$/,
@@ -155,7 +170,9 @@ module.exports = {
                 [
                   'react-css-modules',
                   {
-                    generateScopedName: isDebug ? '[name]-[local]-[hash:base64:5]' : '[hash:base64:5]',
+                    generateScopedName: isDebug
+                      ? '[name]-[local]-[hash:base64:5]'
+                      : '[hash:base64:5]',
                   },
                 ],
               ],
@@ -177,7 +194,9 @@ module.exports = {
                   importLoaders: 1,
                   sourceMap: isDebug,
                   modules: true,
-                  localIdentName: isDebug ? '[name]-[local]-[hash:base64:5]' : '[hash:base64:5]',
+                  localIdentName: isDebug
+                    ? '[name]-[local]-[hash:base64:5]'
+                    : '[hash:base64:5]',
                   minimize: isDebug
                     ? false
                     : {

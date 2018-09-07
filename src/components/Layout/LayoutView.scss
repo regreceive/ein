@@ -1,7 +1,16 @@
-
 @font-face {
   font-family: LibreBaskerville;
   src: url('../../../font/librebaskerville/LibreBaskerville-Regular.ttf');
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url('../../../font/Montserrat/Montserrat-Regular.ttf');
+}
+
+@font-face {
+  font-family: PingFangSC-Medium;
+  src: url('../../../font/PingFang Medium/PingFang Medium.ttf');
 }
 
 body,
@@ -15,16 +24,8 @@ li {
   list-style: none;
 }
 
-section {
-  background-color: #001c31;
-}
-
-@font-face {
-  font-family: Montserrat;
-  src: url('../../../font/Montserrat/Montserrat-Regular.ttf');
-}
-
-@font-face {
-  font-family: PingFangSC-Medium;
-  src: url('../../../font/PingFang Medium/PingFang Medium.ttf');
+svg {
+  path {
+    fill: inherit;
+  }
 }

@@ -186,14 +186,14 @@
 .aniSpan {
   // animation: spanAnimate 0.2s ease 2.5s 1;
   // /*调用已定义好的动画lefteaseinAnimate，全程运行时间1S，进入的速度曲线为ease，只播放一次*/
- 
+
   // opacity: 0;
   // /*规定动画的最后状态为结束状态*/
   // animation-fill-mode: forwards;
   transform: translateY(120%);
   animation: spanAnimate 0.4s ease-out;
   animation-fill-mode: forwards;
- 
+
 }
 @keyframes spanAnimate {
   0%{
