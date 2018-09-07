@@ -27,7 +27,7 @@
     pointer-events: none;
 
     @media (max-width:750px) {
-      width:100%;
+      width:305px;
       height: 128px;
       margin:87px 0 0 0;
       font-size:64px;
@@ -62,24 +62,25 @@
     }
 
     @media (max-width:750px) {
-      width:100%;
+      width:325px;
       margin-top:-40px;
     }
   }
 
   .No-of-Shards-256-N {
-    max-width: 500px;
-    height: 168px;
+    max-width: 0px;
+    // height: 168px;
     margin: 70px 0 0 0;
     color: #fff;
-    overflow: hidden;
-    // font-family: Montserrat;
-    font-family:Montserrat-Regular;
+    font-family:Montserrat;
     line-height: 2;
     letter-spacing: normal;
-
-    p {
-      margin-top: 32px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: textAnimate 0.5s linear 2.7s;
+    animation-fill-mode: forwards;
+    .text1 {
+        margin-top: 32px;
     }
 
     @media (max-width:750px) {
@@ -98,7 +99,9 @@
     background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #a5fecb, #20bdff 42%, #1a29ff);
     background-origin: border-box;
     background-clip: content-box, border-box;
-
+    animation: floatUp .5s linear 2.7s;
+    animation-fill-mode: forwards;
+    opacity: 0;
     .Rectangle-3 {
       width: 178px;
       height: 48px;
@@ -106,6 +109,7 @@
       border-radius: 24px;
       outline: none;
       background-image: linear-gradient(to bottom, #3853ff, #1a29ff);
+      font-family: Montserrat;
     }
 
     input {
@@ -117,10 +121,7 @@
       border-radius: 30px;
       outline: none;
       background: #001c31;
-      // border: solid 3px transparent;
-      // background-image: linear-gradient(#ffffff, #ffffff), linear-gradient(to right, #a5fecb, #20bdff 42%, #1a29ff);
-      // background-origin: border-box;
-      // background-clip: content-box, border-box;
+      font-family: Montserrat;
     }
 
     button {
@@ -141,7 +142,7 @@
     height:55px;
     border: solid 2px transparent;
     border-radius: 30px;
-    margin:80px 0 58px 0;
+    margin:120px 0 58px 0;
     background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #a5fecb, #20bdff 42%, #1a29ff);
     background-origin: border-box;
     background-clip: content-box, border-box;
@@ -153,6 +154,7 @@
       border-radius: 30px;
       outline: none;
       background: #001c31;
+      padding-left:18px;
     }
 
     .btn {
@@ -183,6 +185,25 @@
     padding:105px 25px 0 25px;
   }
 }
+
+@keyframes floatUp {
+  0%{
+    opacity: 0;
+    bottom: -15px;
+  }
+  25%{
+    opacity: 0.2;
+    bottom: -10px;
+  }
+  50%{
+    opacity: 0.5;
+    bottom:-5px;
+  }
+  100%{
+    opacity: 1;
+    bottom:0px;
+  }
+}
 .aniSpan {
   // animation: spanAnimate 0.2s ease 2.5s 1;
   // /*调用已定义好的动画lefteaseinAnimate，全程运行时间1S，进入的速度曲线为ease，只播放一次*/
@@ -191,7 +212,7 @@
   // /*规定动画的最后状态为结束状态*/
   // animation-fill-mode: forwards;
   transform: translateY(120%);
-  animation: spanAnimate 0.4s ease-out;
+  animation: spanAnimate 0.4s ease-out 0.25s;
   animation-fill-mode: forwards;
 
 }
@@ -227,70 +248,22 @@
 
   /*在100%时设置文字在想X轴0px位移处，也就是原始布局的位置，透明度为1，也就是文字可以看见了*/
 }
-
-@-webkit-keyframes lefteaseinAnimate {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-2000px);
+// .company_name {
+//   opacity: 0;
+//   /*调用已定义好的动画lefteaseinAnimate，全程运行时间1S，进入的速度曲线为ease，只播放一次*/
+//   animation: lefteaseinAnimate 1s ease 2.7s 1;
+//   /*规定动画的最后状态为结束状态*/
+//   animation-fill-mode: forwards;
+// }
+ 
+@keyframes textAnimate {
+  0%{
+    max-width: 0px;
   }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-  }
-}
-
-@-o-keyframes lefteaseinAnimate {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-2000px);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
+  100%{
+    // white-space: wrap;
+    max-width: 700px;
   }
 }
 
-@-ms-keyframes lefteaseinAnimate {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-2000px);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-  }
-}
-
-@-moz-keyframes lefteaseinAnimate {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-2000px);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-  }
-}
-
-.company_name {
-  opacity: 0;
-
-  /*调用已定义好的动画lefteaseinAnimate，全程运行时间1S，进入的速度曲线为ease，只播放一次*/
-  -webkit-animation: lefteaseinAnimate 1s ease 2.5s 1;
-  -ms-animation: lefteaseinAnimate 1s ease 2.5s 1;
-  -o-animation: lefteaseinAnimate 1s ease 2.5s 1;
-  -moz-animation: lefteaseinAnimate 1s ease 2.5s 1;
-  animation: lefteaseinAnimate 1s ease 2.5s 1;
-
-  /*规定动画的最后状态为结束状态*/
-  -webkit-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
-  -ms-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
 
