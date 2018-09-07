@@ -36,12 +36,12 @@ $bot:-9px;
   top: -460px;
   left: 0;
   .line{
-    animation: line 1s linear;
+    animation: line 1s linear 1.5s;
     animation-fill-mode: forwards;
     @include line;
   }
   .line1 {
-    animation: stepOne .5s linear 1.2s;
+    animation: stepOne .5s linear 2.7s;
     animation-fill-mode: forwards;
     @include line;
     z-index:1;
@@ -52,7 +52,7 @@ $bot:-9px;
     box-shadow: 0 0 5px 0 #a5fecb;
     transform: scale(0, 0);
     @include circle-common;
-    animation: showStepOne .2s linear 1s;  
+    animation: showStepOne .2s linear 2.5s;  
   }
   .animation2 {
     left: 22.5%;
@@ -60,12 +60,12 @@ $bot:-9px;
     box-shadow: 0 0 5px 0 #a5fecb;
     transform: scale(1, 1);
     @include circle-common;
-    animation: flash 1s infinite 0.5s;
+    animation: flash 1s infinite 2s;
   }
   .step2 {
     left: 40.8%;
     transform: scale(0, 0);
-    animation: showStepOne .2s linear 1s;
+    animation: showStepOne .2s linear 2.5s;
     animation-fill-mode: forwards;
     @include circle-common;
   }
@@ -74,7 +74,7 @@ $bot:-9px;
     bottom: $bot;
     left: 67.2%;
     transform: scale(0, 0);
-    animation: showStepOne .2s linear 1s;
+    animation: showStepOne .2s linear 2.5s;
     animation-fill-mode: forwards;
     @include circle-common;
   }
@@ -86,7 +86,7 @@ $bot:-9px;
     color: #fff;
     opacity: 0;
     font-size: 24px;
-    animation: twink .2s 1s;
+    animation: twink .2s 2.5s;
     animation-fill-mode: forwards;
     // text-shadow: 0px 0px 4px #fff;
 
@@ -101,7 +101,7 @@ $bot:-9px;
     left: 21%;
     color: #fff;
     opacity: 0;
-    animation: twink .2s linear 1s;
+    animation: twink .2s linear 2.5s;
     animation-fill-mode: forwards;
   }
 
@@ -112,7 +112,7 @@ $bot:-9px;
     color: #fff;
     opacity: 0;
     font-family: Montserrat;
-    animation: twink .2s linear 1s;
+    animation: twink .2s linear 2.5s;
     animation-fill-mode: forwards;
   }
 
@@ -123,7 +123,7 @@ $bot:-9px;
     color: #fff;
     opacity: 0;
     font-family: Montserrat;
-    animation: twink .2s linear 1s;
+    animation: twink .2s linear 2.5s;
     animation-fill-mode: forwards;
   }
 
