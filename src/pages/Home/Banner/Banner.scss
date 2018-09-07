@@ -27,7 +27,7 @@
     pointer-events: none;
 
     @media (max-width:750px) {
-      width:100%;
+      width:305px;
       height: 128px;
       margin:87px 0 0 0;
       font-size:64px;
@@ -62,7 +62,7 @@
     }
 
     @media (max-width:750px) {
-      width:100%;
+      width:325px;
       margin-top:-40px;
     }
   }
@@ -142,7 +142,7 @@
     height:55px;
     border: solid 2px transparent;
     border-radius: 30px;
-    margin:80px 0 58px 0;
+    margin:120px 0 58px 0;
     background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #a5fecb, #20bdff 42%, #1a29ff);
     background-origin: border-box;
     background-clip: content-box, border-box;
@@ -154,6 +154,7 @@
       border-radius: 30px;
       outline: none;
       background: #001c31;
+      padding-left:18px;
     }
 
     .btn {

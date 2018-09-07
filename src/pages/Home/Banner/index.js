@@ -65,7 +65,7 @@ const Banner = props => {
           <button styleName="Rectangle-3">{translate('home.button')}</button>
         </div>
         <div styleName="mobile-Rectangle">
-          <input />
+          <input placeholder="Subscribe for Updates" type="text" />
           <div styleName="btn">
             <span styleName="arrow" />
           </div>
