@@ -1,17 +1,16 @@
 import React from 'react';
-
 import './Footer.css';
 const imgs = [
-  require('./img/what.png'),
-  require('./img/m.png'),
-  require('./img/ti.png'),
-  require('./img/face.png'),
-  require('./img/fei.png'),
-  require('./img/Bitmap.png'),
-  require('./img/weibo.png'),
-  require('./img/zsxq.png'),
-  require('./img/Email.png'),
-  require('./img/weichat.png'),
+  require('./svg/Discord.svg'),
+  require('./svg/Medium.svg'),
+  require('./svg/Twitter.svg'),
+  require('./svg/Facebook.svg'),
+  require('./svg/Telegram.svg'),
+  require('./svg/BitcoinTalk.svg'),
+  require('./svg/Weibo.svg'),
+  require('./svg/ZSXQ.svg'),
+  require('./svg/Email.svg'),
+  require('./svg/WeChat.svg'),
 ];
 const Footer = () => {
   return (
@@ -81,16 +80,16 @@ const Footer = () => {
             Copyright © Echoin Team 2014-2018 Echoin Contributors www.echoin.io
           </p>
         </div>
-        {/* <div styleName="Private-Policy">
-          <ul>
-            <li>Private Policy</li>
-            <li>contact@echoin.io</li>
-            <li>Terms of Use</li>
+        <div>
+          <ul styleName="mobile-bottom">
+            <li styleName="Private-Policy-mobile">Private Policy</li>
+            <li styleName="Private-Policy-mobile">contact@echoin.io</li>
+            <li styleName="Private-Policy-mobile">Terms of Use</li>
           </ul>
+          <p styleName="Copyright-Echoin-T-mobile">
+            Copyright © Echoin Team 2014-2018 Echoin Contributors www.echoin.io
+          </p>
         </div>
-        <p styleName="Copyright">
-          Copyright © Echoin Team 2014-2018 Echoin Contributors www.echoin.io
-        </p> */}
       </div>
     </div>
   );

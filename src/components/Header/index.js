@@ -9,7 +9,7 @@ import { Menu, Dropdown, Button, Icon } from 'antd';
 
 import { setLanguage } from '../../services/language';
 import './Header.css';
-import logo from './assets/logo.png';
+import logo from './assets/Logo.svg';
 
 const lang = {
   en: 'English',
