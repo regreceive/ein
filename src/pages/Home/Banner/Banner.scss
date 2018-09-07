@@ -68,16 +68,19 @@
   }
 
   .No-of-Shards-256-N {
-    max-width: 500px;
-    height: 168px;
+    max-width: 0px;
+    // height: 168px;
     margin: 70px 0 0 0;
     color: #fff;
-    font-family:Montserrat-Regular;
+    font-family:Montserrat;
     line-height: 2;
     letter-spacing: normal;
-
-    p {
-      margin-top: 32px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: textAnimate 0.5s linear 2.7s;
+    animation-fill-mode: forwards;
+    .text1 {
+        margin-top: 32px;
     }
 
     @media (max-width:750px) {
@@ -244,11 +247,22 @@
 
   /*在100%时设置文字在想X轴0px位移处，也就是原始布局的位置，透明度为1，也就是文字可以看见了*/
 }
-.company_name {
-  opacity: 0;
-  /*调用已定义好的动画lefteaseinAnimate，全程运行时间1S，进入的速度曲线为ease，只播放一次*/
-  animation: lefteaseinAnimate 1s ease 2.7s 1;
-  /*规定动画的最后状态为结束状态*/
-  animation-fill-mode: forwards;
+// .company_name {
+//   opacity: 0;
+//   /*调用已定义好的动画lefteaseinAnimate，全程运行时间1S，进入的速度曲线为ease，只播放一次*/
+//   animation: lefteaseinAnimate 1s ease 2.7s 1;
+//   /*规定动画的最后状态为结束状态*/
+//   animation-fill-mode: forwards;
+// }
+ 
+@keyframes textAnimate {
+  0%{
+    max-width: 0px;
+  }
+  100%{
+    // white-space: wrap;
+    max-width: 700px;
+  }
 }
+
 
