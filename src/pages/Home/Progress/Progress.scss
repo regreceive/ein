@@ -12,7 +12,7 @@ $bot:-9px;
   height: $h;
   background: url('./assets/circle.png') no-repeat;
   background-size: 100% 100%;
-  z-index: 1;
+  z-index: 99;
 }
 
 @mixin circle-inside {
@@ -35,44 +35,37 @@ $bot:-9px;
   position: relative;
   top: -460px;
   left: 0;
-
+  .line{
+    animation: line 1s linear;
+    animation-fill-mode: forwards;
+    @include line;
+  }
   .line1 {
-    animation: stepOne 1s linear;
+    animation: stepOne .5s linear 1.2s;
     animation-fill-mode: forwards;
     @include line;
+    z-index:1;
   }
-
-  .line2 {
-    animation: stepTwo 1s linear 1.5s;
-    animation-fill-mode: forwards;
-    @include line;
-  }
-
-  .line3 {
-    animation: stepThree 1s linear 3s;
-    animation-fill-mode: forwards;
-    @include line;
-  }
-
-  .line4 {
-    animation: stepFour 1s linear 4.5s;
-    animation-fill-mode: forwards;
-    @include line;
-  }
-
-  .step1 {
+  .animation1{
     left: 22.5%;
     border-radius: 50%;
     box-shadow: 0 0 5px 0 #a5fecb;
     transform: scale(0, 0);
-    animation: flash 1s infinite 1s;
     @include circle-common;
+    animation: showStepOne .2s linear 1s;  
   }
-
+  .animation2 {
+    left: 22.5%;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 0 #a5fecb;
+    transform: scale(1, 1);
+    @include circle-common;
+    animation: flash 1s infinite 0.5s;
+  }
   .step2 {
     left: 40.8%;
     transform: scale(0, 0);
-    animation: showStepOne .5s linear 2.5s;
+    animation: showStepOne .2s linear 1s;
     animation-fill-mode: forwards;
     @include circle-common;
   }
@@ -81,7 +74,7 @@ $bot:-9px;
     bottom: $bot;
     left: 67.2%;
     transform: scale(0, 0);
-    animation: showStepOne .5s linear 4s;
+    animation: showStepOne .2s linear 1s;
     animation-fill-mode: forwards;
     @include circle-common;
   }
@@ -93,18 +86,12 @@ $bot:-9px;
     color: #fff;
     opacity: 0;
     font-size: 24px;
-    animation: twink 1s 1s;
+    animation: twink .2s 1s;
     animation-fill-mode: forwards;
-    text-shadow: 0px 0px 4px #fff;
+    // text-shadow: 0px 0px 4px #fff;
 
     span {
-      &:first-child {
         font-family: Montserrat;
-      }
-
-      &:last-child {
-        font-family: PingFangSC Medium;
-      }
     }
   }
 
@@ -114,7 +101,7 @@ $bot:-9px;
     left: 21%;
     color: #fff;
     opacity: 0;
-    animation: twink 1s linear 2s;
+    animation: twink .2s linear 1s;
     animation-fill-mode: forwards;
   }
 
@@ -125,7 +112,7 @@ $bot:-9px;
     color: #fff;
     opacity: 0;
     font-family: Montserrat;
-    animation: twink 1s linear 2.5s;
+    animation: twink .2s linear 1s;
     animation-fill-mode: forwards;
   }
 
@@ -136,7 +123,7 @@ $bot:-9px;
     color: #fff;
     opacity: 0;
     font-family: Montserrat;
-    animation: twink 1s linear 4s;
+    animation: twink .2s linear 1s;
     animation-fill-mode: forwards;
   }
 
@@ -169,57 +156,22 @@ $bot:-9px;
   }
 }
 
-/*------第二条线动画效果-----*/
-@keyframes stepTwo {
+/*------主线动画效果-----*/
+@keyframes line {
   0% {
     bottom: 0;
-    left: 23%;
+    left: 0;
     width: 0;
     background: #fff;
   }
 
   100% {
     bottom: 0;
-    left: 23%;
-    width: 18%;
+    left: 0;
+    width: 100%;
     background: #fff;
   }
 }
-
-/*-----第三条线动画效果---*/
-@keyframes stepThree {
-  0% {
-    bottom: 0;
-    left: 41.5%;
-    width: 0;
-    background: #fff;
-  }
-
-  100% {
-    bottom: 0;
-    left: 41.5%;
-    width: 26%;
-    background: #fff;
-  }
-}
-
-/*----第四条线的动画效果---*/
-@keyframes stepFour {
-  0% {
-    bottom: 0;
-    left: 68%;
-    width: 0;
-    background: #fff;
-  }
-
-  100% {
-    bottom: 0;
-    left: 68%;
-    width: 32%;
-    background: #fff;
-  }
-}
-
 /*----节点出现效果----*/
 @keyframes showStepOne {
   0% {
@@ -271,26 +223,21 @@ $bot:-9px;
 @keyframes flash {
   0% {
     box-shadow: 0 0 5px 0 #a5fecb;
-    transform: scale(1, 1);
   }
 
   25% {
     box-shadow: 0 0 10px 0 #a5fecb;
-    transform: scale(1, 1);
   }
 
   50% {
     box-shadow: 0 0 15px 0 #a5fecb;
-    transform: scale(1, 1);
   }
 
   75% {
     box-shadow: 0 0 10px 0 #a5fecb;
-    transform: scale(1, 1);
   }
 
   100% {
     box-shadow: 0 0 5px 0 #a5fecb;
-    transform: scale(1, 1);
   }
 }
