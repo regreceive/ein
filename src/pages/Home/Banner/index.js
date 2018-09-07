@@ -1,7 +1,6 @@
 import React from 'react';
 
 import './Banner.css';
-import { Icon } from 'antd';
 import Progress from '../Progress';
 import Spot from './effects/Spot';
 const Banner = props => {
