@@ -56,7 +56,9 @@ const Banner = props => {
         </div>
         <div styleName="mobile-Rectangle">
           <input />
-          <div styleName="btn" />
+          <div styleName="btn">
+            <span styleName="arrow" />
+          </div>
         </div>
       </div>
       <Progress />
