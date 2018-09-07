@@ -41,12 +41,22 @@ const Banner = props => {
           </h4>
         </div>
         <div styleName="No-of-Shards-256-N">
-          <ul styleName="company_name">
+          <ul>
             <li>{translate('home.li-1')}</li>
             <li>{translate('home.li-2')}</li>
             <li>{translate('home.li-3')}</li>
           </ul>
-          <p styleName="company_name">{translate('home.natework')}</p>
+          <div styleName="text1">
+            {translate('home.natework').substring(
+              0,
+              translate('home.natework').indexOf('/') + 1,
+            )}
+          </div>
+          <div>
+            {translate('home.natework').substring(
+              translate('home.natework').indexOf('/') + 1,
+            )}
+          </div>
         </div>
         <div styleName="Rectangle">
           <input placeholder="Email" type="text" />
@@ -54,7 +64,7 @@ const Banner = props => {
           <button styleName="Rectangle-3">{translate('home.button')}</button>
         </div>
         <div styleName="mobile-Rectangle">
-          <input />
+          <input placeholder="Subscribe for Updates" type="text" />
           <div styleName="btn">
             <span styleName="arrow" />
           </div>
