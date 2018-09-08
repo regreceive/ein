@@ -21,7 +21,7 @@
     opacity: .08;
     font-weight:bold;
     font-size: 150px;
-    font-family: Montserrat;
+    font-family: Montserrat Light;
     line-height: .93;
     letter-spacing: 8.3px;
     pointer-events: none;
@@ -70,9 +70,10 @@
   .No-of-Shards-256-N {
     max-width: 0px;
     // height: 168px;
+    font-size:14px;
     margin: 70px 0 0 0;
     color: #fff;
-    font-family:Montserrat;
+    font-family: Montserrat Light;
     line-height: 2;
     letter-spacing: normal;
     overflow: hidden;
@@ -109,7 +110,7 @@
       border-radius: 24px;
       outline: none;
       background-image: linear-gradient(to bottom, #3853ff, #1a29ff);
-      font-family: Montserrat;
+      font-family: Montserrat Light;
     }
 
     input {
@@ -121,7 +122,7 @@
       border-radius: 30px;
       outline: none;
       background: #001c31;
-      font-family: Montserrat;
+      font-family: Montserrat Light;
     }
 
     button {
