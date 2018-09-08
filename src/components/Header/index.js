@@ -9,7 +9,7 @@ import { Menu, Dropdown, Button, Icon } from 'antd';
 
 import { setLanguage } from '../../services/language';
 import './Header.css';
-import logo from './assets/Logo.svg';
+import Logo from './assets/Logo.svg';
 
 const lang = {
   en: 'English',
@@ -49,7 +49,7 @@ export default class extends React.Component {
       <div styleName="root">
         <div styleName="container">
           <a href="/" styleName="head-logo">
-            <img src={logo} alt="" />
+            <Logo />
           </a>
           <div styleName="head-Public-Chain-Ecology">
             {translate('home.slogan')}

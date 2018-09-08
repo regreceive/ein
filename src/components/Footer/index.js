@@ -1,17 +1,15 @@
 import React from 'react';
 import './Footer.css';
-const imgs = [
-  require('./svg/Discord.svg'),
-  require('./svg/Medium.svg'),
-  require('./svg/Twitter.svg'),
-  require('./svg/Facebook.svg'),
-  require('./svg/Telegram.svg'),
-  require('./svg/BitcoinTalk.svg'),
-  require('./svg/Weibo.svg'),
-  require('./svg/ZSXQ.svg'),
-  require('./svg/Email.svg'),
-  require('./svg/WeChat.svg'),
-];
+import Discord from './svg/Discord.svg';
+import Medium from './svg/Medium.svg';
+import Twitter from './svg/Twitter.svg';
+import Facebook from './svg/Facebook.svg';
+import Telegram from './svg/Telegram.svg';
+import BitcoinTalk from './svg/BitcoinTalk.svg';
+import Weibo from './svg/Weibo.svg';
+import ZSXQ from './svg/ZSXQ.svg';
+import Email from './svg/Email.svg';
+import WeChat from './svg/WeChat.svg';
 const Footer = () => {
   return (
     <div styleName="root">
@@ -27,52 +25,52 @@ const Footer = () => {
           <ul>
             <li>
               <a href="">
-                <img alt="" src={imgs[0]} />
+                <Discord />
               </a>
             </li>
             <li>
               <a href="">
-                <img alt="" src={imgs[1]} />
+                <Medium />
               </a>
             </li>
             <li>
               <a href="">
-                <img alt="" src={imgs[2]} />
+                <Twitter />
               </a>
             </li>
             <li>
               <a href="">
-                <img alt="" src={imgs[3]} />
+                <Facebook />
               </a>
             </li>
             <li>
               <a href="">
-                <img alt="" src={imgs[4]} />
+                <Telegram />
               </a>
             </li>
             <li>
               <a href="">
-                <img alt="" src={imgs[5]} />
+                <BitcoinTalk />
               </a>
             </li>
             <li>
               <a href="">
-                <img alt="" src={imgs[6]} />
+                <Weibo />
               </a>
             </li>
             <li>
               <a href="">
-                <img alt="" src={imgs[7]} />
+                <ZSXQ />
               </a>
             </li>
             <li>
               <a href="">
-                <img alt="" src={imgs[8]} />
+                <Email />
               </a>
             </li>
             <li>
               <a href="">
-                <img alt="" src={imgs[9]} />
+                <WeChat />
               </a>
             </li>
           </ul>
