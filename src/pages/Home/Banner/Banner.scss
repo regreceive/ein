@@ -79,7 +79,6 @@
     white-space: nowrap;
     animation: textAnimate 0.5s linear 2.7s;
     animation-fill-mode: forwards;
-    font-size: 14px;
     .text1 {
         margin-top: 32px;
     }
@@ -111,14 +110,6 @@
       outline: none;
       background-image: linear-gradient(to bottom, #3853ff, #1a29ff);
       font-family: Montserrat;
-      font-size: 16px;
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 48px;
-  letter-spacing: 1.1px;
-  text-align: center;
-  color: #ffffff;
     }
 
     input {
@@ -164,15 +155,6 @@
       outline: none;
       background: #001c31;
       padding-left:18px;
-      opacity: 0.4;
-      font-family: Montserrat;
-      font-size: 16px;
-      font-weight: 200;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: normal;
-      letter-spacing: normal;
-      color: #ffffff;
     }
 
     .btn {
