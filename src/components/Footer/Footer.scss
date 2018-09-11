@@ -7,21 +7,24 @@
     max-width: 1190px;
     margin: 0 auto;
     overflow: hidden;
-    height:100%;
+    height: 100%;
     position: relative;
+
     .bottom-left {
       position: absolute;
-      top:0;
-      bottom:0;
-      left:10px;
-      margin:auto;
-      height:70px;
-      @media (max-width :768px){
+      top: 0;
+      bottom: 0;
+      left: 10px;
+      margin: auto;
+      height: 70px;
+
+      @media (max-width: 768px) {
         display: none;
       }
+
       li {
         height: 20px;
-        font-family: Montserrat Light;
+        font-family: Montserrat-Light;
         font-size: 12px;
         font-weight: normal;
         font-style: normal;
@@ -30,37 +33,41 @@
         letter-spacing: normal;
         color: #ffffff;
         color: #ffffff;
-        &:not(:first-child){
-          margin-top:6.5px;
+
+        &:not(:first-child) {
+          margin-top: 6.5px;
         }
       }
     }
 
     .bottom-right {
       position: absolute;
-      top:0;
-      right:10px;
-      bottom:0;
-      margin:auto;
-      height:70px;
-      @media (max-width :768px){
+      top: 0;
+      right: 10px;
+      bottom: 0;
+      margin: auto;
+      height: 70px;
+
+      @media (max-width: 768px) {
         margin-top: 30px;
-        position: relative!important;
-        padding-left:20px;
-        height:0px!important;
+        position: relative !important;
+        padding-left: 20px;
+        height: 0px !important;
       }
-      @media (max-width :320px){
-        padding-left:10px;
+
+      @media (max-width :320px) {
+        padding-left: 10px;
         width: 100%;
       }
-     
-      ul{
-        @media (max-width :768px){
+
+      ul {
+        @media (max-width: 768px) {
           display: flex;
-          justify-content:  space-around;
+          justify-content: space-around;
           flex-wrap: nowrap;
         }
       }
+
       li {
         float: left;
         width: 30px;
@@ -69,38 +76,44 @@
         border-radius: 16px;
         margin-right: 17px;
         background-color: white;
-        font-family: Montserrat Light;
-        .example{
+        font-family: Montserrat-Light;
+
+        .example {
           width: 30px;
           height: 30px;
           font-size: 100px;
         }
-        @media (max-width :768px){
+
+        @media (max-width :768px) {
           width: 0.22rem;
           height: 0.22rem;
           float: float;
           margin-right: 0;
           border-radius: 0.16rem;
           background-color: white;
-         
         }
-        &:not(:last-child){
+
+        &:not(:last-child) {
           margin-right: 19px;
-          @media (max-width :768px){
+
+          @media (max-width: 768px) {
             margin-right: 0px;
           }
         }
+
         &:hover {
           background-color: blue;
           cursor: pointer;
-          svg{
+
+          svg {
             path {
               fill: #ffffff;
+            }
           }
-          }
-          svg{
-            img{
-              fill: #ffffff!important;
+
+          svg {
+            img {
+              fill: #ffffff !important;
             }
           }
         }
@@ -110,42 +123,46 @@
           height: 16px;
           margin-top: 7px;
           margin-left: 6px;
-          @media (max-width :768px){
+
+          @media (max-width: 768px) {
             width: 0.12rem;
             height: 0.12rem;
             margin-left: 0.05rem;
-            margin-top:-0.01rem;
+            margin-top: -0.01rem;
           }
-          @media (max-width :320px){
+
+          @media (max-width :320px) {
             margin-bottom: 0.03rem;
-            margin-top:0rem;
+            margin-top: 0rem;
           }
         }
       }
+
       .Copyright-Echoin-T {
-       margin-top: 53px;
-       height: 20px;
-       font-family: Montserrat Light;
-       font-size: 12px;
-       font-weight: normal;
-       font-style: normal;
-       font-stretch: normal;
-       line-height: 2;
-       letter-spacing: 0.6px;
-       color: #ffffff;
-       @media (max-width :768px){
-         display: none;
-       }
+        margin-top: 53px;
+        height: 20px;
+        font-family: Montserrat-Light;
+        font-size: 12px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 2;
+        letter-spacing: 0.6px;
+        color: #ffffff;
+
+        @media (max-width: 768px) {
+          display: none;
+        }
       }
     }
-
   }
 }
-@media (max-width :768px){
+
+@media (max-width :768px) {
   .Copyright-Echoin-T {
     width: 473px;
     height: 20px;
-    font-family: Montserrat;
+    font-family: Montserrat-Light;
     font-size: 12px;
     font-weight: normal;
     font-style: normal;
@@ -155,66 +172,70 @@
     color: #ffffff;
     margin-top: 12px;
   }
+}
 
+.Private-Policy {
+  color: #ffffff;
 }
-.Private-Policy{
-  color:#ffffff;
-}
-.mobile-bottom{
+
+.mobile-bottom {
   display: none;
 }
-.Copyright-Echoin-T-mobile{
+
+.Copyright-Echoin-T-mobile {
   display: none;
 }
-@media (max-width :768px){
-  .mobile-bottom{
+
+@media (max-width :768px) {
+  .mobile-bottom {
     display: block;
     height: 29px;
     display: flex;
-    justify-content:  space-around;
+    justify-content: space-around;
     flex-wrap: nowrap;
-    margin-top: 40px!important;
+    margin-top: 40px !important;
     width: 90%;
     margin: auto;
-    @media (max-width :320px){
+
+    @media (max-width: 320px) {
       width: 100%;
     }
   }
-.Private-Policy-mobile{
-  height: 29px;
-  font-family: Montserrat Light;
-  font-size: 11px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 2.18;
-  letter-spacing: 0.5px;
-  text-align: center;
-  color: #ffffff;
-  @media (max-width :320px){
-    letter-spacing: 0.1px;
-    line-height: 1.5;
-    font-size: 6px;
+
+  .Private-Policy-mobile {
+    height: 29px;
+    font-family: Montserrat-Light;
+    font-size: 11px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.18;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #ffffff;
+
+    @media (max-width: 320px) {
+      letter-spacing: 0.1px;
+      line-height: 1.5;
+      font-size: 6px;
+    }
   }
-}
-.Copyright-Echoin-T-mobile{
-  display: block;
-  width: 317px;
-  height: 43px;
-  opacity: 0.5;
-  font-family: Montserrat Light;
-  font-size: 11px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.55;
-  letter-spacing: 0.5px;
-  text-align: center;
-  color: #ffffff;
-  margin: auto;
-  margin-top: 10px!important;
 
-}
-
-
+  .Copyright-Echoin-T-mobile {
+    display: block;
+    width: 317px;
+    height: 43px;
+    opacity: 0.5;
+    font-family: Montserrat-Light;
+    font-size: 11px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.55;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #ffffff;
+    margin: auto;
+    margin-top: 10px !important;
+  }
 }

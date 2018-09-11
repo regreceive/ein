@@ -4,13 +4,23 @@
 }
 
 @font-face {
-  font-family: Montserrat;
-  src: url('../../../font/Montserrat/Montserrat-Regular.ttf');
+  font-family: Montserrat-SemiBold;
+  src: url('../../../font/Montserrat/Montserrat-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: Montserrat-Light;
+  src: url('../../../font/Montserrat/Montserrat-Light.ttf');
 }
 
 @font-face {
   font-family: PingFangSC-Medium;
   src: url('../../../font/PingFang Medium/PingFang Medium.ttf');
+}
+
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url('../../../font/Montserrat/Montserrat-Bold.ttf');
 }
 
 body,
