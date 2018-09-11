@@ -20,7 +20,7 @@ export default class extends React.Component {
       <React.Fragment>
         <Header />
         <Banner translate={translate} />
-        <Footer />
+        <Footer translate={translate} />
       </React.Fragment>
     );
   }

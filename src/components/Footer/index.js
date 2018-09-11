@@ -10,15 +10,17 @@ import Weibo from './svg/Weibo.svg';
 import ZSXQ from './svg/ZSXQ.svg';
 import Email from './svg/Email.svg';
 import WeChat from './svg/WeChat.svg';
-const Footer = () => {
+import ReactSVG from 'react-svg';
+const Footer = props => {
+  const { translate } = props;
   return (
     <div styleName="root">
       <div styleName="container">
         <div styleName="bottom-left">
           <ul>
-            <li>Private Policy</li>
-            <li>Terms of Use</li>
-            <li>contact@echoin.io</li>
+            <li>{translate('footer.li-1')}</li>
+            <li>{translate('footer.li-2')}</li>
+            <li>{translate('footer.li-3')}</li>
           </ul>
         </div>
         <div styleName="bottom-right">
@@ -80,9 +82,15 @@ const Footer = () => {
         </div>
         <div>
           <ul styleName="mobile-bottom">
-            <li styleName="Private-Policy-mobile">Private Policy</li>
-            <li styleName="Private-Policy-mobile">contact@echoin.io</li>
-            <li styleName="Private-Policy-mobile">Terms of Use</li>
+            <li styleName="Private-Policy-mobile">
+              {translate('footer.li-1')}
+            </li>
+            <li styleName="Private-Policy-mobile">
+              {translate('footer.li-3')}
+            </li>
+            <li styleName="Private-Policy-mobile">
+              {translate('footer.li-2')}
+            </li>
           </ul>
           <p styleName="Copyright-Echoin-T-mobile">
             Copyright © Echoin Team 2014-2018 Echoin Contributors www.echoin.io

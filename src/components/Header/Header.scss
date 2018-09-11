@@ -9,7 +9,6 @@
     padding:0 10px;
     margin: 0 auto;
     overflow: hidden;
-
     .head-logo {
       display: block;
       width: 235px;
@@ -56,31 +55,54 @@
 
 .head-nav {
   float: right;
-  padding: 0;
-  margin: 20px 30px 0 0;
-  font-size: 14px;
+  // padding: 0;
+  // margin: 20px 30px 0 0;
+  // font-size: 14px;
+  position: relative;}
+//   > li {
+//     display: inline-block;
+//     list-style-type: none;
+//     margin-left: 30px;
 
-  > li {
-    display: inline-block;
-    list-style-type: none;
-    margin-left: 30px;
+//     &.head-padding {
+//       color: red;
+//     }
 
-    &.head-padding {
-      color: red;
-    }
+//     &.head-user {
+//       margin: 0 10px;
+//     }
+//   }
 
-    &.head-user {
-      margin: 0 10px;
-    }
-  }
+//   a {
+//     color: #c7cce6;
+//     text-decoration: none;
+//     transition: all .2s ease-in-out;
 
-  a {
-    color: #c7cce6;
-    text-decoration: none;
-    transition: all .2s ease-in-out;
+//     &:hover {
+//       color: #7a98f7;
+//     }
+//   }
+// }
+//中英文切换
+.language{
+  opacity: 0.4!important;
+}
 
-    &:hover {
-      color: #7a98f7;
-    }
-  }
+.tab-language{
+position: absolute;
+top:-114px;
+right: 0px;
+width: 82px;
+height: 20px;
+font-family: Montserrat;
+font-size: 16px;
+font-weight: normal;
+font-style: normal;
+font-stretch: normal;
+line-height: 1.5;
+letter-spacing: 1;
+text-align: right;
+color: #ffffff;
+cursor: pointer;
+
 }

@@ -24,14 +24,22 @@ const lang = {
   };
 })
 export default class extends React.Component {
-  handleMenuClick = e => {
+  constructor() {
+    super();
+    this.state = { language: true };
+  }
+  handleMenuClick = (e, language, status) => {
     const { dispatch, translate } = this.props;
-    setLanguage(e.key, dispatch);
-    dispatch(this.props.setActiveLanguage(e.key));
+    this.setState({
+      language: status,
+    });
+    setLanguage(language, dispatch);
+    dispatch(this.props.setActiveLanguage(language));
+    console.log(e.target.key);
   };
 
   menu = (
-    <Menu onClick={this.handleMenuClick}>
+    <Menu>
       <Menu.Item key="en">
         <Icon type="user" />
         English
@@ -72,6 +80,29 @@ export default class extends React.Component {
                   {lang[this.props.currentLanguage]} <Icon type="down" />
                 </Button>
               </Dropdown>
+            </li>
+          </ul> */}
+          {/* <ul styleName="head-nav">
+            <li styleName="tab-language">
+              [
+              <span
+                onClick={e => {
+                  this.handleMenuClick(e, 'en', true);
+                }}
+                styleName={this.state.language == true ? '' : 'language '}
+              >
+                EN
+              </span>
+              |
+              <span
+                onClick={e => {
+                  this.handleMenuClick(e, 'cn', false);
+                }}
+                styleName={this.state.language == false ? '' : 'language'}
+              >
+                CN
+              </span>
+              ]
             </li>
           </ul> */}
         </div>
