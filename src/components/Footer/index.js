@@ -10,7 +10,6 @@ import Weibo from './svg/Weibo.svg';
 import ZSXQ from './svg/ZSXQ.svg';
 import Email from './svg/Email.svg';
 import WeChat from './svg/WeChat.svg';
-import ReactSVG from 'react-svg';
 const Footer = props => {
   const { translate } = props;
   return (
