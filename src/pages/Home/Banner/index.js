@@ -61,10 +61,10 @@ export default class Banner extends React.Component {
           <div styleName="No-of-Shards-256-N">
             <ul>
               <li>{translate('home.li-1')}</li>
-              <li>{translate('home.li-2')}</li>
-              <li>{translate('home.li-3')}</li>
+              {/* <li>{translate('home.li-2')}</li>
+              <li>{translate('home.li-3')}</li> */}
             </ul>
-            <div styleName="text1">
+            {/* <div styleName="text1">
               {translate('home.natework').substring(
                 0,
                 translate('home.natework').indexOf('/') + 1,
@@ -74,7 +74,7 @@ export default class Banner extends React.Component {
               {translate('home.natework').substring(
                 translate('home.natework').indexOf('/') + 1,
               )}
-            </div>
+            </div> */}
           </div>
           <div styleName="Rectangle">
             <input placeholder="Email" type="text" />
