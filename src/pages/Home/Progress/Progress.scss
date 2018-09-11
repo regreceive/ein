@@ -38,6 +38,7 @@ $bot:-9px;
   .line{
     animation: line 1s linear 0.7s;
     animation-fill-mode: forwards;
+    opacity: .5;
     @include line;
   }
   .line1 {
@@ -52,7 +53,7 @@ $bot:-9px;
     box-shadow: 0 0 5px 0 #a5fecb;
     transform: scale(0, 0);
     @include circle-common;
-    animation: showStepOne .2s linear 1.7s;  
+    animation: showStepOne .2s linear 1.7s;
   }
   .animation2 {
     left: 22.5%;
