@@ -60,7 +60,7 @@ export default class extends React.Component {
             <Logo />
           </a>
           <div styleName="head-Public-Chain-Ecology">
-            {translate('home.slogan')}
+            {translate('header.slogan')}
           </div>
 
           {/* <ul styleName="head-nav">

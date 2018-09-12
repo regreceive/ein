@@ -1,6 +1,5 @@
 import React from 'react';
 import './Footer.css';
-import Discord from './svg/Discord.svg';
 import Medium from './svg/Medium.svg';
 import Twitter from './svg/Twitter.svg';
 import Facebook from './svg/Facebook.svg';
@@ -10,6 +9,7 @@ import Weibo from './svg/Weibo.svg';
 import ZSXQ from './svg/ZSXQ.svg';
 import Email from './svg/Email.svg';
 import WeChat from './svg/WeChat.svg';
+import qrc from './img/wechat.png';
 const Footer = props => {
   const { translate } = props;
   return (
@@ -25,37 +25,35 @@ const Footer = props => {
         <div styleName="bottom-right">
           <ul>
             <li>
-              <a href="">
-                <Discord />
-              </a>
-            </li>
-            <li>
-              <a href="">
+              <a href="https://medium.com/@echo_realm" target="_blank">
                 <Medium />
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="https://twitter.com/Echoin_io" target="_blank">
                 <Twitter />
               </a>
             </li>
             <li>
-              <a href="">
+              <a
+                href="https://www.facebook.com/Echoin-199615797563357/"
+                target="_blank"
+              >
                 <Facebook />
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="https://t.me/EchoinEN" target="_blank">
                 <Telegram />
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="" target="_blank">
                 <BitcoinTalk />
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="https://weibo.com/u/6481472691" target="_blank">
                 <Weibo />
               </a>
             </li>
@@ -65,12 +63,13 @@ const Footer = props => {
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="mailto:contact@echoin.io">
                 <Email />
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="javascript:void(0)">
+                {/* <img styleName="wechat-img" src={qrc} /> */}
                 <WeChat />
               </a>
             </li>
