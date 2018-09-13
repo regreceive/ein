@@ -169,7 +169,6 @@ export default class extends React.Component {
           centered={true}
           closable={false}
           onCancel={this.handleCancel}
-          style={{ width: 50, height: 50 }}
         >
           {this.state.isImg == 'star' ? (
             <img src={starMobile} />
