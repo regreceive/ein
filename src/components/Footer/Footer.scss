@@ -6,10 +6,12 @@
   .container {
     max-width: 1190px;
     margin: 0 auto;
-    overflow: hidden;
     height: 100%;
     position: relative;
 
+    @media (max-width: 768px) {
+      overflow: hidden;
+    }
     .bottom-left {
       position: absolute;
       top: 0;
@@ -32,8 +34,6 @@
         line-height: 2;
         letter-spacing: normal;
         color: #ffffff;
-        color: #ffffff;
-
         &:not(:first-child) {
           margin-top: 6.5px;
         }
@@ -132,11 +132,24 @@
         }
         .wechat-img{
           position: absolute;
-          width: 258px;
-          height: 258px;
-          top:-128px;
-          left: -128px;
+          top:-140px;
+          left: -59px;
           z-index:100;
+          width: 144px;
+          height: 141px;
+          object-fit: contain;
+          display: none;
+        }
+    
+      }
+      li:nth-child(9):hover{
+        .wechat-img{
+          display: block;
+        }
+      }
+      li:nth-child(7):hover{
+        .wechat-img{
+          display: block;
         }
       }
 
