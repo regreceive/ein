@@ -1,3 +1,4 @@
+const minimist = require('minimist');
 const Koa = require('koa');
 const bodyParser = require('koa-bodyparser');
 const onerror = require('koa-onerror');
@@ -5,8 +6,10 @@ const logger = require('koa-logger');
 const router = require('./router');
 const app = new Koa();
 
-const DEFAULT_PORT = parseInt(process.env.PORT, 10) || 3000;
-const HOST = process.env.HOST || 'localhost';
+const args = minimist(process.argv.slice(2));
+
+const host = args.host || 'localhost';
+const port = parseInt(args.port, 10) || 8000;
 
 onerror(app);
 app.use(
@@ -24,8 +27,9 @@ app.use(async (ctx, next) => {
 
 app.use(async (ctx, next) => {
   await next();
+  // `http://${HOST}:${DEFAULT_PORT}`
   ctx.set({
-    'Access-Control-Allow-Origin': `http://${HOST}:${DEFAULT_PORT}`,
+    'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE',
     'Access-Control-Allow-Headers':
       'x-requested-with, accept, origin, content-type',
@@ -46,6 +50,6 @@ app.on('error', (err, ctx) => {
   console.error('server error', err, ctx);
 });
 
-app.listen(8000, () => {
-  console.log('listen on:' + 8000);
+app.listen(port, host, () => {
+  console.log('listen on ' + host + ':' + port);
 });

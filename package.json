@@ -73,12 +73,13 @@
   "scripts": {
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "yarn build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
-    "start": "set port=3011&&npm-run-all -p watch-css start-js",
+    "start": "npm-run-all -p watch-css start-js",
     "start-js": "node scripts/start.js",
     "build": "npm-run-all build-css build-js",
     "build-js": "node scripts/build.js",
     "build:release": "cross-env yarn build-css && GENERATE_SOURCEMAP=false node scripts/build.js --release",
     "lint-css": "stylelint 'src/**/*.scss' --fix",
+    "server": "node server",
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {
@@ -145,6 +146,7 @@
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
     "less-vars-to-js": "^1.3.0",
+    "minimist": "^1.2.0",
     "node-sass-chokidar": "^1.3.3",
     "npm-run-all": "^4.1.3",
     "postcss-pxtorem": "^4.0.1",
