@@ -17,3 +17,7 @@ export function getActiveLanguage(langs) {
   }
   return 'en';
 }
+
+export function isEmail(email) {
+  return /^[\w\d_.-]+@[\w\d-]+(\.[\w\d-]+)*\.[\w\d]{2,6}$/.test(email);
+}

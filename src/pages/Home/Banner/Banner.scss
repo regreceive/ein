@@ -132,6 +132,7 @@
       position: absolute;
       top: 3.5px;
       right: 6px;
+      cursor: pointer;
     }
 
     @media (max-width:750px) {
@@ -187,6 +188,16 @@
     @media (max-width:750px) {
       display:block;
     }
+  }
+
+  .response {
+    display: block;
+    margin-top: 16px;
+    color: #fff;
+    opacity: .4;
+    font-style: normal;
+    font-size: 12px;
+    font-family: Montserrat-Light, sans-serif;
   }
 
   @media (max-width:750px) {
@@ -264,7 +275,7 @@
 //   /*规定动画的最后状态为结束状态*/
 //   animation-fill-mode: forwards;
 // }
- 
+
 @keyframes textAnimate {
   0%{
     max-width: 0px;

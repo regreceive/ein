@@ -11,3 +11,17 @@ export function userDataComplete(data) {
     payload: data.assets,
   };
 }
+
+export function subscribe(email) {
+  return {
+    type: 'USER.SUBSCRIBE',
+    payload: email,
+  };
+}
+
+export function subscribeComplete(data) {
+  return {
+    type: 'USER.SUBSCRIBE_COMPLETE',
+    payload: data,
+  };
+}

@@ -1,17 +1,44 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-import './Banner.css';
-
+import { subscribe as actionSubscribe } from '../../../actions/userActions';
 import Progress from '../Progress';
 import Spot from './effects/Spot';
+import { isEmail } from '../../../utils/common';
+
+import './Banner.css';
+import { getTranslate } from 'react-localize-redux/lib/index';
+
 let frist = 1;
+
+@connect(state => {
+  return {
+    translate: getTranslate(state.locale),
+    subscribe: state.user.subscribe,
+  };
+})
 export default class Banner extends React.Component {
+  componentDidMount() {
+    this.inputRef = React.createRef();
+  }
+
+  subscribeHandle = event => {
+    if (this.props.subscribeStatus === 'waiting') {
+      return;
+    }
+
+    const email = this.inputRef.current.value;
+    if (isEmail(email)) {
+      this.props.dispatch(actionSubscribe(email));
+    }
+  };
+
   render() {
-    const { translate } = this.props;
+    const { translate, subscribe } = this.props;
     let result = translate('home.text-1');
     let ycc = null;
     let ycc1 = null;
-    if (result.indexOf('Missing translationId') == -1) {
+    if (result.indexOf('Missing translationId') === -1) {
       ycc = result;
       ycc1 = ycc.split('');
       frist++;
@@ -24,7 +51,7 @@ export default class Banner extends React.Component {
           <div styleName="Latest-Testnet-Trial">
             <h4 styleName="text-style-1">
               {ycc1 &&
-                frist == 2 &&
+                frist === 2 &&
                 ycc1.map((item, i) => (
                   <span
                     styleName="aniSpan"
@@ -77,9 +104,15 @@ export default class Banner extends React.Component {
             </div> */}
           </div>
           <div styleName="Rectangle">
-            <input placeholder="Email" type="text" />
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <button styleName="Rectangle-3">{translate('home.button')}</button>
+            <input placeholder="Email" type="text" ref={this.inputRef} />
+            <button styleName="Rectangle-3" onClick={this.subscribeHandle}>
+              {translate('home.button')}
+            </button>
+            {subscribe.status === 'ok' && (
+              <em styleName="response">
+                {translate('home.subscribe_response')}
+              </em>
+            )}
           </div>
           <div styleName="mobile-Rectangle">
             <input placeholder="Subscribe for Updates" type="text" />
