@@ -42,7 +42,7 @@ if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
 
 // First, read the current file sizes in build directory.
 // This lets us display how much they changed later.
-measureFileSizesBeforeBuild(paths.appBuild)
+measureFileSizesBeforeBuild(path.join(paths.appBuild, 'public'))
   .then(previousFileSizes => {
     // Remove all content but keep the directory so that
     // if you're in it, you don't end up in Trash
@@ -60,12 +60,12 @@ measureFileSizesBeforeBuild(paths.appBuild)
         console.log(
           '\nSearch for the ' +
             chalk.underline(chalk.yellow('keywords')) +
-            ' to learn more about each warning.'
+            ' to learn more about each warning.',
         );
         console.log(
           'To ignore, add ' +
             chalk.cyan('// eslint-disable-next-line') +
-            ' to the line before.\n'
+            ' to the line before.\n',
         );
       } else {
         console.log(chalk.green('Compiled successfully.\n'));
@@ -75,9 +75,9 @@ measureFileSizesBeforeBuild(paths.appBuild)
       printFileSizesAfterBuild(
         stats,
         previousFileSizes,
-        paths.appBuild,
+        path.join(paths.appBuild, 'public'),
         WARN_AFTER_BUNDLE_GZIP_SIZE,
-        WARN_AFTER_CHUNK_GZIP_SIZE
+        WARN_AFTER_CHUNK_GZIP_SIZE,
       );
       console.log();
 
@@ -90,15 +90,18 @@ measureFileSizesBeforeBuild(paths.appBuild)
         publicUrl,
         publicPath,
         buildFolder,
-        useYarn
+        useYarn,
       );
     },
     err => {
       console.log(chalk.red('Failed to compile.\n'));
       printBuildError(err);
       process.exit(1);
-    }
-  );
+    },
+  )
+  .then(() => {
+    return forServer();
+  });
 
 // Create the production build and print the deployment instructions.
 function build(previousFileSizes) {
@@ -128,8 +131,8 @@ function build(previousFileSizes) {
         console.log(
           chalk.yellow(
             '\nTreating warnings as errors because process.env.CI = true.\n' +
-              'Most CI servers set it automatically.\n'
-          )
+              'Most CI servers set it automatically.\n',
+          ),
         );
         return reject(new Error(messages.warnings.join('\n\n')));
       }
@@ -143,8 +146,43 @@ function build(previousFileSizes) {
 }
 
 function copyPublicFolder() {
-  fs.copySync(paths.appPublic, paths.appBuild, {
+  fs.copySync(paths.appPublic, path.join(paths.appBuild, 'public'), {
     dereference: true,
     filter: file => file !== paths.appHtml,
   });
+}
+
+const pkg = require('../package.json');
+
+async function writeFile(file, contents) {
+  return new Promise((resolve, reject) => {
+    fs.writeFile(
+      file,
+      contents,
+      'utf8',
+      err => (err ? reject(err) : resolve()),
+    );
+  });
+}
+
+async function forServer() {
+  await Promise.all([
+    writeFile(
+      'build/package.json',
+      JSON.stringify(
+        {
+          private: true,
+          dependencies: pkg.dependencies,
+          scripts: {
+            server: 'pm2 start ecosystem.config.js --env production',
+          },
+        },
+        null,
+        2,
+      ),
+    ),
+    fs.copy('yarn.lock', 'build/yarn.lock'),
+    fs.copy('ecosystem.config.js', 'build/ecosystem.config.js'),
+    fs.copy('server', 'build/server'),
+  ]);
 }
