@@ -1,10 +1,13 @@
 const Sequelize = require('sequelize');
 
-const username = process.env.MYSQL_USERNAME || root;
+const host = process.env.MYSQL_HOST || 'localhost';
+const port = process.env.MYSQL_PORT || '3306';
+const username = process.env.MYSQL_USERNAME || 'root';
 const pwd = process.env.MYSQL_PWD || '123456';
+
 const sequelize = new Sequelize('echoin', username, pwd, {
-  host: 'localhost',
-  port: '3306',
+  host,
+  port,
   operatorsAliases: Sequelize.Op,
   dialect: 'mysql',
   define: {
