@@ -1,6 +1,8 @@
 const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize('echoin', 'root', '123456', {
+const username = process.env.MYSQL_USERNAME || root;
+const pwd = process.env.MYSQL_PWD || '123456';
+const sequelize = new Sequelize('echoin', username, pwd, {
   host: 'localhost',
   port: '3306',
   operatorsAliases: Sequelize.Op,
