@@ -9,7 +9,7 @@ import { isEmail } from '../../../utils/common';
 import './Banner.css';
 import { getTranslate } from 'react-localize-redux/lib/index';
 
-let frist = 1;
+let fristAnimation = 1;
 
 @connect(state => {
   return {
@@ -17,7 +17,7 @@ let frist = 1;
     subscribe: state.user.subscribe,
   };
 })
-export default class Banner extends React.Component {
+export default class extends React.Component {
   componentDidMount() {
     this.inputRef = React.createRef();
   }
@@ -36,12 +36,12 @@ export default class Banner extends React.Component {
   render() {
     const { translate, subscribe } = this.props;
     let result = translate('home.text-1');
-    let ycc = null;
-    let ycc1 = null;
+    let testnet = null;
+    let testnet1 = null;
     if (result.indexOf('Missing translationId') === -1) {
-      ycc = result;
-      ycc1 = ycc.split('');
-      frist++;
+      testnet = result;
+      testnet1 = testnet.split('');
+      fristAnimation++;
     }
     return (
       <div styleName="root">
@@ -50,9 +50,9 @@ export default class Banner extends React.Component {
           <div styleName="bg-font">{translate('home.soon')}</div>
           <div styleName="Latest-Testnet-Trial">
             <h4 styleName="text-style-1">
-              {ycc1 &&
-                frist === 2 &&
-                ycc1.map((item, i) => (
+              {testnet1 &&
+                fristAnimation === 2 &&
+                testnet1.map((item, i) => (
                   <span
                     styleName="aniSpan"
                     style={{
@@ -67,9 +67,9 @@ export default class Banner extends React.Component {
                     )}
                   </span>
                 ))}
-              {ycc1 &&
-                frist > 2 &&
-                ycc1.map((item, i) => (
+              {testnet1 &&
+                fristAnimation > 2 &&
+                testnet1.map((item, i) => (
                   <span
                     style={{
                       animationDelay: i / 60 + 's',
