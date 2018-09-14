@@ -162,20 +162,20 @@ export default class extends React.Component {
               www.echoin.io
             </p>
           </div>
+          <Modal
+            visible={this.state.visible}
+            footer={null}
+            centered={true}
+            closable={false}
+            onCancel={this.handleCancel}
+          >
+            {this.state.isImg == 'star' ? (
+              <img src={starMobile} style={{ width: 150, height: 150 }} />
+            ) : (
+              <img src={weChat} style={{ width: 150, height: 150 }} />
+            )}
+          </Modal>
         </div>
-        <Modal
-          visible={this.state.visible}
-          footer={null}
-          centered={true}
-          closable={false}
-          onCancel={this.handleCancel}
-        >
-          {this.state.isImg == 'star' ? (
-            <img src={starMobile} />
-          ) : (
-            <img src={weChat} />
-          )}
-        </Modal>
       </div>
     );
   }
