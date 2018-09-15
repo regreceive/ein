@@ -93,7 +93,7 @@ export default class extends React.Component {
                 </a>
               </li>
               <li>
-                <a href="" target="_blank">
+                <a href="javascript:void(0)" target="_blank">
                   <BitcoinTalk />
                 </a>
               </li>
