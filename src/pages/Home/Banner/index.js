@@ -26,7 +26,7 @@ export default class extends React.Component {
   }
 
   subscribeHandle = device => event => {
-    if (this.props.subscribeStatus === 'waiting') {
+    if (this.props.subscribe === 'waiting') {
       return;
     }
 
@@ -44,7 +44,6 @@ export default class extends React.Component {
   };
 
   render() {
-    console.log(111);
     const { translate, subscribe } = this.props;
     let result = translate('home.text-1');
     let testnet = null;
