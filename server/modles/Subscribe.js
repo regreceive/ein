@@ -13,7 +13,7 @@ const Subscribe = sequelize.define('Subscribe', {
     type: Sequelize.STRING(255),
     validate: { isEmail: true },
     unique: true,
-    notNull: true,
+    allowNull: false,
   },
 
   ip: {
