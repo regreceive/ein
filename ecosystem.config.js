@@ -15,7 +15,7 @@ module.exports = {
       env_production : {
         NODE_ENV: 'production',
         HOST: 'localhost',
-        PORT: 3001,
+        PORT: 8000,
         MYSQL_HOST: 'localhost',
         MYSQL_PORT: '3306',
         MYSQL_USERNAME: 'root',
