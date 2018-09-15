@@ -18,22 +18,33 @@ let fristAnimation = 1;
   };
 })
 export default class extends React.Component {
-  componentDidMount() {
+  constructor(props) {
+    super(props);
+
     this.inputRef = React.createRef();
+    this.inputMRef = React.createRef();
   }
 
-  subscribeHandle = event => {
+  subscribeHandle = device => event => {
     if (this.props.subscribeStatus === 'waiting') {
       return;
     }
 
-    const email = this.inputRef.current.value;
+    let el;
+    if (device === 'pc') {
+      el = this.inputRef.current;
+    } else {
+      el = this.inputMRef.current;
+    }
+    const email = el.value;
+
     if (isEmail(email)) {
       this.props.dispatch(actionSubscribe(email));
     }
   };
 
   render() {
+    console.log(111);
     const { translate, subscribe } = this.props;
     let result = translate('home.text-1');
     let testnet = null;
@@ -105,7 +116,10 @@ export default class extends React.Component {
           </div>
           <div styleName="Rectangle">
             <input placeholder="Email" type="text" ref={this.inputRef} />
-            <button styleName="Rectangle-3" onClick={this.subscribeHandle}>
+            <button
+              styleName="Rectangle-3"
+              onClick={this.subscribeHandle('pc')}
+            >
               {translate('home.button')}
             </button>
             {subscribe.status === 'ok' && (
@@ -115,10 +129,19 @@ export default class extends React.Component {
             )}
           </div>
           <div styleName="mobile-Rectangle">
-            <input placeholder="Subscribe for Updates" type="text" />
-            <div styleName="btn">
+            <input
+              placeholder="Subscribe for Updates"
+              type="text"
+              ref={this.inputMRef}
+            />
+            <div styleName="btn" onClick={this.subscribeHandle('mobile')}>
               <span styleName="arrow" />
             </div>
+            {subscribe.status === 'ok' && (
+              <em styleName="response">
+                {translate('home.subscribe_response')}
+              </em>
+            )}
           </div>
         </div>
         <Progress />
