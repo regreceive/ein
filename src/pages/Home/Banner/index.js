@@ -26,7 +26,7 @@ export default class extends React.Component {
   }
 
   subscribeHandle = device => event => {
-    if (this.props.subscribeStatus === 'waiting') {
+    if (this.props.subscribe === 'waiting') {
       return;
     }
 
