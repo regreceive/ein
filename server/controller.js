@@ -3,8 +3,10 @@ const Subscribe = require('./modles/Subscribe');
 
 exports.subscribe = async ctx => {
   const email = ctx.request.body.email;
-  const ip = ctx.request.ip;
-  console.log(email);
+  const request = ctx.request;
+  const ip =
+    request.header['x-real-ip'] || request.header['remote-host'] || request.ip;
+
   try {
     await Subscribe.create({ email, ip });
   } catch (e) {
